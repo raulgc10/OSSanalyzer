@@ -9,7 +9,7 @@ def obtener_issues(repo_owner, repo_name):
     for issue in github_repo.fetch():
         print(f"Título: {issue['data']['title']}")
         print(f"Estado: {issue['data']['state']}")
-        print(f"URL: {issue['data']['html_url']}")
+        print(f"URL: {issue['data']['reactions']}")
         print("------")
 
 # Proporciona el nombre del propietario del repositorio y el nombre del repositorio
