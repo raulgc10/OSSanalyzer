@@ -24,9 +24,6 @@ def obtener_issues_url(url_repo):
 
     owner, repo_name = path_parts
 
-    # Credenciales de autenticación de GitHub (token de acceso)
-    token = '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'  # Reemplaza con tu token de acceso a GitHub
-
     # Crea una instancia del backend de GitHub
     github_repo = GitHub(owner=owner, repository=repo_name)
 
@@ -38,8 +35,3 @@ def obtener_issues_url(url_repo):
         print("------")
 
 
-# Proporciona la URL completa del repositorio de GitHub
-url_repositorio = 'https://github.com/raulgc10/OSSanalyzer'
-
-# Llama a la función para obtener issues
-obtener_issues_url(url_repositorio)
