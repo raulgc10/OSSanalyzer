@@ -1,0 +1,26 @@
+2024-01-21 12:55:32,007 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4440
+2024-01-21 12:55:32,007 - [33mPress CTRL+C to quit[0m
+2024-01-21 12:55:39,110 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4440
+2024-01-21 12:55:39,110 - [33mPress CTRL+C to quit[0m
+2024-01-21 12:55:39,114 -  * Restarting with stat
+2024-01-21 12:55:39,532 -  * Debugger is active!
+2024-01-21 12:55:39,542 -  * Debugger PIN: 101-469-896
+2024-01-21 12:56:02,039 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 12:56:02,082 -  * Restarting with stat
+2024-01-21 12:56:02,478 -  * Debugger is active!
+2024-01-21 12:56:02,487 -  * Debugger PIN: 101-469-896
+2024-01-21 12:56:04,256 - Página principal solicitada
+2024-01-21 12:56:04,258 - 127.0.0.1 - - [21/Jan/2024 12:56:04] "GET / HTTP/1.1" 200 -
+2024-01-21 12:56:15,225 - Página principal solicitada
+2024-01-21 12:56:15,225 - 127.0.0.1 - - [21/Jan/2024 12:56:15] "GET / HTTP/1.1" 200 -
+2024-01-21 12:56:18,925 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 12:56:18,925 - [33mPress CTRL+C to quit[0m
+2024-01-21 12:56:18,930 -  * Restarting with stat
+2024-01-21 12:56:19,336 -  * Debugger is active!
+2024-01-21 12:56:19,346 -  * Debugger PIN: 101-469-896
+2024-01-21 12:56:26,450 - 127.0.0.1 - - [21/Jan/2024 12:56:26] "[33mGET /mi_endpoint HTTP/1.1[0m" 404 -
+2024-01-21 12:56:32,111 - Página principal solicitada
+2024-01-21 12:56:32,113 - 127.0.0.1 - - [21/Jan/2024 12:56:32] "GET / HTTP/1.1" 200 -
