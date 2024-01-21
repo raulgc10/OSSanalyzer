@@ -28,3 +28,61 @@
 2024-01-21 12:59:22,207 -  * Restarting with stat
 2024-01-21 12:59:22,598 -  * Debugger is active!
 2024-01-21 12:59:22,608 -  * Debugger PIN: 101-469-896
+2024-01-21 13:01:20,954 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 13:01:21,000 -  * Restarting with stat
+2024-01-21 13:01:21,416 -  * Debugger is active!
+2024-01-21 13:01:21,426 -  * Debugger PIN: 101-469-896
+2024-01-21 13:04:17,363 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 13:04:17,363 - [33mPress CTRL+C to quit[0m
+2024-01-21 13:04:17,368 -  * Restarting with stat
+2024-01-21 13:04:17,755 -  * Debugger is active!
+2024-01-21 13:04:17,764 -  * Debugger PIN: 101-469-896
+2024-01-21 13:04:26,971 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 13:04:26,972 - [33mPress CTRL+C to quit[0m
+2024-01-21 13:04:26,977 -  * Restarting with stat
+2024-01-21 13:04:27,370 -  * Debugger is active!
+2024-01-21 13:04:27,379 -  * Debugger PIN: 101-469-896
+2024-01-21 13:04:52,409 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 13:04:52,447 -  * Restarting with stat
+2024-01-21 13:04:52,841 -  * Debugger is active!
+2024-01-21 13:04:52,850 -  * Debugger PIN: 101-469-896
+2024-01-21 13:04:54,387 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 13:04:54,387 - [33mPress CTRL+C to quit[0m
+2024-01-21 13:04:54,392 -  * Restarting with stat
+2024-01-21 13:04:54,790 -  * Debugger is active!
+2024-01-21 13:04:54,798 -  * Debugger PIN: 101-469-896
+2024-01-21 13:05:05,625 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 13:05:05,669 -  * Restarting with stat
+2024-01-21 13:05:06,066 -  * Debugger is active!
+2024-01-21 13:05:06,075 -  * Debugger PIN: 101-469-896
+2024-01-21 13:05:08,178 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 13:05:08,178 - [33mPress CTRL+C to quit[0m
+2024-01-21 13:05:08,183 -  * Restarting with stat
+2024-01-21 13:05:08,580 -  * Debugger is active!
+2024-01-21 13:05:08,589 -  * Debugger PIN: 101-469-896
+2024-01-21 13:05:14,726 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 13:05:14,757 -  * Restarting with stat
+2024-01-21 13:05:15,141 -  * Debugger is active!
+2024-01-21 13:05:15,149 -  * Debugger PIN: 101-469-896
+2024-01-21 13:05:16,692 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 13:05:16,692 - [33mPress CTRL+C to quit[0m
+2024-01-21 13:05:16,697 -  * Restarting with stat
+2024-01-21 13:05:17,095 -  * Debugger is active!
+2024-01-21 13:05:17,104 -  * Debugger PIN: 101-469-896
+2024-01-21 13:05:25,606 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 13:05:25,643 -  * Restarting with stat
+2024-01-21 13:05:26,021 -  * Debugger is active!
+2024-01-21 13:05:26,029 -  * Debugger PIN: 101-469-896
+2024-01-21 13:06:41,375 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-01-21 13:06:41,405 -  * Restarting with stat
+2024-01-21 13:06:50,838 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-01-21 13:06:50,838 - [33mPress CTRL+C to quit[0m
+2024-01-21 13:06:50,843 -  * Restarting with stat
+2024-01-21 13:06:51,223 -  * Debugger is active!
+2024-01-21 13:06:51,231 -  * Debugger PIN: 101-469-896

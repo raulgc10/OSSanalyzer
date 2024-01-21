@@ -12,9 +12,10 @@ def configload(config_file):
 
 
 # Función para obtener el puerto
-def port_load():
+def ip_port_load():
     app_port = config["mainconfig"]["port"]
-    return app_port
+    app_ip = config["mainconfig"]["ip"]
+    return app_port, app_ip
 
 
 # Función para obtener configuración de los logs
@@ -30,7 +31,8 @@ def log_load():
 config = configload("config/OSSAnalyzerconfig.json")
 
 # Cargamos el puerto y la config de logs
-port = port_load()
+port = ip_port_load()[0]
+ip = ip_port_load()[1]
 logs = log_load()
 
 # Crea una instancia de la aplicación Flask
@@ -54,4 +56,5 @@ def index():
 
 # Ejecuta la aplicación
 if __name__ == '__main__':
-    app.run(debug=True, port=port)
+    print(f"La aplicación se está ejecutando en {ip}:{port}")
+    app.run(debug=True, port=port, host=ip)
