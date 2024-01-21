@@ -50,7 +50,7 @@ def index():
 # Define una ruta (endpoint) y la función que manejará las solicitudes en esa ruta
 # @app.route('/userrepo', methods=['GET', 'POST'])
 #
-# @app.route('/userrepo', methods=['GET', 'POST'])
+# @app.route('/url', methods=['GET', 'POST'])
 
 # Ejecuta la aplicación
 if __name__ == '__main__':
