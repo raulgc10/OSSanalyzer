@@ -1,0 +1,11 @@
+{
+  "mainconfig": {
+    "port": 5000,
+    "ip": "127.0.0.1"
+  },
+  "log": {
+    "filename": "logs/OSSAnalyzer.log",
+    "level": 10,
+    "format": "%(asctime)s - %(message)s"
+  }
+}
