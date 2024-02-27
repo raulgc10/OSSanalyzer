@@ -44,11 +44,17 @@ logging.basicConfig(level=logs[0], filename=logs[1], format=logs[2])
 
 # Define la ruta principal en la que se darán diferentes opciones al usuario para obtener los datos de los repositorios de github
 @app.route('/', methods=['GET'])
-def index():
+def mainpage_html():
     app.logger.info("Página principal solicitada")
     return render_template("mainpage.html")
 
+@app.route('/mainpage.js', methods=['GET'])
+def mainpage_js():
+    return render_template("mainpage.js")
 
+@app.route('/mainpage.css', methods=['GET'])
+def mainpage_css():
+    return render_template("mainpage.css")
 # Define una ruta (endpoint) y la función que manejará las solicitudes en esa ruta
 # @app.route('/userrepo', methods=['GET', 'POST'])
 #
