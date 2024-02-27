@@ -86,3 +86,24 @@
 2024-01-21 13:06:50,843 -  * Restarting with stat
 2024-01-21 13:06:51,223 -  * Debugger is active!
 2024-01-21 13:06:51,231 -  * Debugger PIN: 101-469-896
+2024-02-27 19:38:56,556 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-27 19:38:56,557 - [33mPress CTRL+C to quit[0m
+2024-02-27 19:38:56,566 -  * Restarting with stat
+2024-02-27 19:38:56,947 -  * Debugger is active!
+2024-02-27 19:38:56,956 -  * Debugger PIN: 121-642-624
+2024-02-27 19:39:00,971 - Página principal solicitada
+2024-02-27 19:39:00,973 - 127.0.0.1 - - [27/Feb/2024 19:39:00] "GET / HTTP/1.1" 200 -
+2024-02-27 19:39:01,162 - 127.0.0.1 - - [27/Feb/2024 19:39:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-02-27 19:39:18,861 - Página principal solicitada
+2024-02-27 19:39:18,862 - 127.0.0.1 - - [27/Feb/2024 19:39:18] "GET / HTTP/1.1" 200 -
+2024-02-27 19:39:19,942 - Página principal solicitada
+2024-02-27 19:39:19,943 - 127.0.0.1 - - [27/Feb/2024 19:39:19] "GET / HTTP/1.1" 200 -
+2024-02-27 19:46:11,508 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-27 19:46:11,508 - [33mPress CTRL+C to quit[0m
+2024-02-27 19:46:11,513 -  * Restarting with stat
+2024-02-27 19:46:11,929 -  * Debugger is active!
+2024-02-27 19:46:11,937 -  * Debugger PIN: 121-642-624
+2024-02-27 19:46:15,889 - Página principal solicitada
+2024-02-27 19:46:15,891 - 127.0.0.1 - - [27/Feb/2024 19:46:15] "GET / HTTP/1.1" 200 -
