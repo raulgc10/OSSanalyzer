@@ -107,3 +107,23 @@
 2024-02-27 19:46:11,937 -  * Debugger PIN: 121-642-624
 2024-02-27 19:46:15,889 - Página principal solicitada
 2024-02-27 19:46:15,891 - 127.0.0.1 - - [27/Feb/2024 19:46:15] "GET / HTTP/1.1" 200 -
+2024-02-27 20:14:02,354 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-27 20:14:02,354 - [33mPress CTRL+C to quit[0m
+2024-02-27 20:14:02,362 -  * Restarting with stat
+2024-02-27 20:14:02,765 -  * Debugger is active!
+2024-02-27 20:14:02,775 -  * Debugger PIN: 121-642-624
+2024-02-27 20:14:08,863 - Página principal solicitada
+2024-02-27 20:14:08,865 - 127.0.0.1 - - [27/Feb/2024 20:14:08] "GET / HTTP/1.1" 200 -
+2024-02-27 20:14:08,938 - 127.0.0.1 - - [27/Feb/2024 20:14:08] "[33mGET /mainpage.css HTTP/1.1[0m" 404 -
+2024-02-27 20:14:08,939 - 127.0.0.1 - - [27/Feb/2024 20:14:08] "[33mGET /mainpage.js HTTP/1.1[0m" 404 -
+2024-02-27 20:21:09,878 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-27 20:21:09,878 - [33mPress CTRL+C to quit[0m
+2024-02-27 20:21:09,887 -  * Restarting with stat
+2024-02-27 20:21:10,293 -  * Debugger is active!
+2024-02-27 20:21:10,301 -  * Debugger PIN: 686-638-964
+2024-02-27 20:21:15,427 - Página principal solicitada
+2024-02-27 20:21:15,429 - 127.0.0.1 - - [27/Feb/2024 20:21:15] "GET / HTTP/1.1" 200 -
+2024-02-27 20:21:15,452 - 127.0.0.1 - - [27/Feb/2024 20:21:15] "[33mGET /mainpage.css HTTP/1.1[0m" 404 -
+2024-02-27 20:21:15,455 - 127.0.0.1 - - [27/Feb/2024 20:21:15] "[33mGET /mainpage.js HTTP/1.1[0m" 404 -
