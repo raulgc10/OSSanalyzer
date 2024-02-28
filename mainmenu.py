@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-import obtener_issues
+from flask import Flask, render_template, request
+from obtener_issues import obtener_issues_personal
 import logging
 import json
 
@@ -55,10 +55,19 @@ def mainpage_js():
 @app.route('/mainpage.css', methods=['GET'])
 def mainpage_css():
     return render_template("mainpage.css")
-# Define una ruta (endpoint) y la función que manejará las solicitudes en esa ruta
-# @app.route('/userrepo', methods=['GET', 'POST'])
-#
-# @app.route('/url', methods=['GET', 'POST'])
+
+@app.route('/userrepo', methods=['GET','POST']) 
+def userrepo():
+    if request.method == 'GET':
+            return render_template("formulario.html")
+    elif request.method == 'POST':
+            username = request.form['username']
+            reponame = request.form['repo']
+            info = obtener_issues_personal(username, reponame)
+            return render_template("mainpage.html")
+    else:
+        return "Error al procesar la petición"
+
 
 # Ejecuta la aplicación
 if __name__ == '__main__':

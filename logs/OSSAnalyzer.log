@@ -355,3 +355,70 @@
 2024-02-27 20:45:58,850 - 127.0.0.1 - - [27/Feb/2024 20:45:58] "GET /mainpage.css HTTP/1.1" 200 -
 2024-02-27 20:45:58,851 - 127.0.0.1 - - [27/Feb/2024 20:45:58] "GET /mainpage.js HTTP/1.1" 200 -
 2024-02-27 20:46:00,521 - 127.0.0.1 - - [27/Feb/2024 20:46:00] "[33mGET /userrepo HTTP/1.1[0m" 404 -
+2024-02-28 19:06:33,767 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-28 19:06:33,767 - [33mPress CTRL+C to quit[0m
+2024-02-28 19:06:33,777 -  * Restarting with stat
+2024-02-28 19:06:34,158 -  * Debugger is active!
+2024-02-28 19:06:34,167 -  * Debugger PIN: 686-638-964
+2024-02-28 19:06:36,268 - Página principal solicitada
+2024-02-28 19:06:36,270 - 127.0.0.1 - - [28/Feb/2024 19:06:36] "GET / HTTP/1.1" 200 -
+2024-02-28 19:06:36,423 - 127.0.0.1 - - [28/Feb/2024 19:06:36] "GET /static/mainpage.js HTTP/1.1" 200 -
+2024-02-28 19:06:36,429 - 127.0.0.1 - - [28/Feb/2024 19:06:36] "GET /static/mainpage.css HTTP/1.1" 200 -
+2024-02-28 19:06:36,575 - 127.0.0.1 - - [28/Feb/2024 19:06:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-02-28 19:06:37,654 - 127.0.0.1 - - [28/Feb/2024 19:06:37] "GET /userrepo HTTP/1.1" 200 -
+2024-02-28 19:06:37,672 - 127.0.0.1 - - [28/Feb/2024 19:06:37] "GET /static/formulario.js HTTP/1.1" 200 -
+2024-02-28 19:06:37,672 - 127.0.0.1 - - [28/Feb/2024 19:06:37] "GET /static/formulario.css HTTP/1.1" 200 -
+2024-02-28 19:06:50,839 - 127.0.0.1 - - [28/Feb/2024 19:06:50] "[31m[1mPOST /userrepo HTTP/1.1[0m" 405 -
+2024-02-28 19:07:05,173 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-02-28 19:07:05,210 -  * Restarting with stat
+2024-02-28 19:07:05,593 -  * Debugger is active!
+2024-02-28 19:07:05,601 -  * Debugger PIN: 686-638-964
+2024-02-28 19:07:11,373 - 127.0.0.1 - - [28/Feb/2024 19:07:11] "GET /userrepo HTTP/1.1" 200 -
+2024-02-28 19:07:11,501 - 127.0.0.1 - - [28/Feb/2024 19:07:11] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-02-28 19:07:11,510 - 127.0.0.1 - - [28/Feb/2024 19:07:11] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-02-28 19:07:21,138 - 127.0.0.1 - - [28/Feb/2024 19:07:21] "POST /userrepo HTTP/1.1" 200 -
+2024-02-28 19:07:21,153 - 127.0.0.1 - - [28/Feb/2024 19:07:21] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-02-28 19:07:21,154 - 127.0.0.1 - - [28/Feb/2024 19:07:21] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-02-28 19:09:40,361 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-02-28 19:09:40,395 -  * Restarting with stat
+2024-02-28 19:11:33,962 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-28 19:11:33,962 - [33mPress CTRL+C to quit[0m
+2024-02-28 19:11:33,965 -  * Restarting with stat
+2024-02-28 19:11:34,349 -  * Debugger is active!
+2024-02-28 19:11:34,358 -  * Debugger PIN: 686-638-964
+2024-02-28 19:11:38,760 - Página principal solicitada
+2024-02-28 19:11:38,762 - 127.0.0.1 - - [28/Feb/2024 19:11:38] "GET / HTTP/1.1" 200 -
+2024-02-28 19:11:38,902 - 127.0.0.1 - - [28/Feb/2024 19:11:38] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-02-28 19:11:38,909 - 127.0.0.1 - - [28/Feb/2024 19:11:38] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-02-28 19:11:40,088 - 127.0.0.1 - - [28/Feb/2024 19:11:40] "GET /userrepo HTTP/1.1" 200 -
+2024-02-28 19:11:40,105 - 127.0.0.1 - - [28/Feb/2024 19:11:40] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-02-28 19:11:40,106 - 127.0.0.1 - - [28/Feb/2024 19:11:40] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-02-28 19:11:48,741 - 127.0.0.1 - - [28/Feb/2024 19:11:48] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-02-28 19:11:48,770 - 127.0.0.1 - - [28/Feb/2024 19:11:48] "GET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-02-28 19:11:48,774 - 127.0.0.1 - - [28/Feb/2024 19:11:48] "GET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-02-28 19:11:48,802 - 127.0.0.1 - - [28/Feb/2024 19:11:48] "GET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-02-28 19:11:48,836 - 127.0.0.1 - - [28/Feb/2024 19:11:48] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-28 19:11:53,927 - 127.0.0.1 - - [28/Feb/2024 19:11:53] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-02-28 19:11:58,407 - 127.0.0.1 - - [28/Feb/2024 19:11:58] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-02-28 19:11:58,426 - 127.0.0.1 - - [28/Feb/2024 19:11:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-02-28 19:11:58,426 - 127.0.0.1 - - [28/Feb/2024 19:11:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-02-28 19:11:58,454 - 127.0.0.1 - - [28/Feb/2024 19:11:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-28 19:11:58,597 - 127.0.0.1 - - [28/Feb/2024 19:11:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-28 19:13:07,242 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-02-28 19:13:07,276 -  * Restarting with stat
+2024-02-28 19:13:07,658 -  * Debugger is active!
+2024-02-28 19:13:07,666 -  * Debugger PIN: 686-638-964
+2024-02-28 19:13:12,298 - Página principal solicitada
+2024-02-28 19:13:12,300 - 127.0.0.1 - - [28/Feb/2024 19:13:12] "GET / HTTP/1.1" 200 -
+2024-02-28 19:13:12,437 - 127.0.0.1 - - [28/Feb/2024 19:13:12] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-02-28 19:13:12,441 - 127.0.0.1 - - [28/Feb/2024 19:13:12] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-02-28 19:13:13,319 - 127.0.0.1 - - [28/Feb/2024 19:13:13] "GET /userrepo HTTP/1.1" 200 -
+2024-02-28 19:13:13,348 - 127.0.0.1 - - [28/Feb/2024 19:13:13] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-02-28 19:13:13,348 - 127.0.0.1 - - [28/Feb/2024 19:13:13] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-02-28 19:13:25,269 - 127.0.0.1 - - [28/Feb/2024 19:13:25] "POST /userrepo HTTP/1.1" 200 -
+2024-02-28 19:13:25,286 - 127.0.0.1 - - [28/Feb/2024 19:13:25] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-02-28 19:13:25,287 - 127.0.0.1 - - [28/Feb/2024 19:13:25] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-02-28 19:14:59,144 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\obtener_issues.py', reloading
+2024-02-28 19:14:59,207 -  * Restarting with stat
