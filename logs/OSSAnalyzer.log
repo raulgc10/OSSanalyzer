@@ -422,3 +422,644 @@
 2024-02-28 19:13:25,287 - 127.0.0.1 - - [28/Feb/2024 19:13:25] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
 2024-02-28 19:14:59,144 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\obtener_issues.py', reloading
 2024-02-28 19:14:59,207 -  * Restarting with stat
+2024-03-03 11:20:48,250 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-03 11:20:48,251 - [33mPress CTRL+C to quit[0m
+2024-03-03 11:20:48,260 -  * Restarting with stat
+2024-03-03 11:20:48,632 -  * Debugger is active!
+2024-03-03 11:20:48,641 -  * Debugger PIN: 143-611-746
+2024-03-03 11:21:16,489 - Página principal solicitada
+2024-03-03 11:21:16,491 - 127.0.0.1 - - [03/Mar/2024 11:21:16] "GET / HTTP/1.1" 200 -
+2024-03-03 11:21:16,645 - 127.0.0.1 - - [03/Mar/2024 11:21:16] "GET /static/mainpage.css HTTP/1.1" 200 -
+2024-03-03 11:21:16,656 - 127.0.0.1 - - [03/Mar/2024 11:21:16] "GET /static/mainpage.js HTTP/1.1" 200 -
+2024-03-03 11:21:16,795 - 127.0.0.1 - - [03/Mar/2024 11:21:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-03-03 11:21:18,037 - 127.0.0.1 - - [03/Mar/2024 11:21:18] "GET /userrepo HTTP/1.1" 200 -
+2024-03-03 11:21:18,057 - 127.0.0.1 - - [03/Mar/2024 11:21:18] "GET /static/formulario.js HTTP/1.1" 200 -
+2024-03-03 11:21:18,058 - 127.0.0.1 - - [03/Mar/2024 11:21:18] "GET /static/formulario.css HTTP/1.1" 200 -
+2024-03-03 11:21:43,446 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-03 11:21:44,075 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer HTTP/1.1" 200 1317
+2024-03-03 11:21:44,075 - Rate limit: 59
+2024-03-03 11:21:44,076 - Rate limit reset: 3599.0
+2024-03-03 11:21:44,076 - 127.0.0.1 - - [03/Mar/2024 11:21:44] "POST /userrepo HTTP/1.1" 200 -
+2024-03-03 11:21:44,110 - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 326, in execute
+    write(data)
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 294, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2024-03-03 11:21:48,316 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-03 11:21:48,696 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer HTTP/1.1" 200 1317
+2024-03-03 11:21:48,697 - Rate limit: 58
+2024-03-03 11:21:48,697 - Rate limit reset: 3595.0
+2024-03-03 11:21:48,697 - 127.0.0.1 - - [03/Mar/2024 11:21:48] "POST /userrepo HTTP/1.1" 200 -
+2024-03-03 11:21:48,721 - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 326, in execute
+    write(data)
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 294, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2024-03-03 11:21:56,913 - Página principal solicitada
+2024-03-03 11:21:56,913 - 127.0.0.1 - - [03/Mar/2024 11:21:56] "GET / HTTP/1.1" 200 -
+2024-03-03 11:21:56,929 - 127.0.0.1 - - [03/Mar/2024 11:21:56] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-03 11:21:56,929 - 127.0.0.1 - - [03/Mar/2024 11:21:56] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-03 11:21:58,000 - 127.0.0.1 - - [03/Mar/2024 11:21:58] "GET /userrepo HTTP/1.1" 200 -
+2024-03-03 11:21:58,025 - 127.0.0.1 - - [03/Mar/2024 11:21:58] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-03 11:21:58,026 - 127.0.0.1 - - [03/Mar/2024 11:21:58] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-03 11:22:06,470 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-03 11:22:07,000 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer HTTP/1.1" 200 1317
+2024-03-03 11:22:07,000 - Rate limit: 57
+2024-03-03 11:22:07,000 - Rate limit reset: 3576.0
+2024-03-03 11:22:07,000 - 127.0.0.1 - - [03/Mar/2024 11:22:07] "POST /userrepo HTTP/1.1" 200 -
+2024-03-03 11:22:07,019 - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 326, in execute
+    write(data)
+  File "C:\Users\raulg\.virtualenvs\OSSanalyzer-eYi267nO\Lib\site-packages\werkzeug\serving.py", line 294, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2024-03-03 11:24:05,747 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-03 11:24:05,790 -  * Restarting with stat
+2024-03-03 11:24:06,181 -  * Debugger is active!
+2024-03-03 11:24:06,191 -  * Debugger PIN: 143-611-746
+2024-03-03 11:24:11,466 - Página principal solicitada
+2024-03-03 11:24:11,468 - 127.0.0.1 - - [03/Mar/2024 11:24:11] "GET / HTTP/1.1" 200 -
+2024-03-03 11:24:11,615 - 127.0.0.1 - - [03/Mar/2024 11:24:11] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-03 11:24:11,622 - 127.0.0.1 - - [03/Mar/2024 11:24:11] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-03 11:24:12,882 - 127.0.0.1 - - [03/Mar/2024 11:24:12] "GET /userrepo HTTP/1.1" 200 -
+2024-03-03 11:24:12,911 - 127.0.0.1 - - [03/Mar/2024 11:24:12] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-03 11:24:12,912 - 127.0.0.1 - - [03/Mar/2024 11:24:12] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-03 11:24:22,094 - 127.0.0.1 - - [03/Mar/2024 11:24:22] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-03 11:24:22,120 - 127.0.0.1 - - [03/Mar/2024 11:24:22] "GET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-03-03 11:24:22,127 - 127.0.0.1 - - [03/Mar/2024 11:24:22] "GET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-03-03 11:24:22,143 - 127.0.0.1 - - [03/Mar/2024 11:24:22] "GET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-03-03 11:24:22,307 - 127.0.0.1 - - [03/Mar/2024 11:24:22] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:05:39,588 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:05:39,589 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:05:39,599 -  * Restarting with stat
+2024-03-04 20:05:39,982 -  * Debugger is active!
+2024-03-04 20:05:39,991 -  * Debugger PIN: 143-611-746
+2024-03-04 20:05:42,924 - Página principal solicitada
+2024-03-04 20:05:42,927 - 127.0.0.1 - - [04/Mar/2024 20:05:42] "GET / HTTP/1.1" 200 -
+2024-03-04 20:05:43,073 - 127.0.0.1 - - [04/Mar/2024 20:05:43] "GET /static/mainpage.css HTTP/1.1" 200 -
+2024-03-04 20:05:43,081 - 127.0.0.1 - - [04/Mar/2024 20:05:43] "GET /static/mainpage.js HTTP/1.1" 200 -
+2024-03-04 20:05:43,214 - 127.0.0.1 - - [04/Mar/2024 20:05:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-03-04 20:05:46,179 - 127.0.0.1 - - [04/Mar/2024 20:05:46] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:05:48,390 - Página principal solicitada
+2024-03-04 20:05:48,390 - 127.0.0.1 - - [04/Mar/2024 20:05:48] "GET / HTTP/1.1" 200 -
+2024-03-04 20:05:48,409 - 127.0.0.1 - - [04/Mar/2024 20:05:48] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:05:48,409 - 127.0.0.1 - - [04/Mar/2024 20:05:48] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:05:55,407 - 127.0.0.1 - - [04/Mar/2024 20:05:55] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:05:55,433 - 127.0.0.1 - - [04/Mar/2024 20:05:55] "GET /static/formulario.css HTTP/1.1" 200 -
+2024-03-04 20:05:55,433 - 127.0.0.1 - - [04/Mar/2024 20:05:55] "GET /static/formulario.js HTTP/1.1" 200 -
+2024-03-04 20:06:08,140 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:06:08,142 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:06:08,708 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:06:08,708 - Rate limit: 34
+2024-03-04 20:06:08,708 - Rate limit reset: 1559.0
+2024-03-04 20:06:08,709 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:06:08,873 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:06:08,873 - Rate limit: 33
+2024-03-04 20:06:08,873 - Rate limit reset: 1559.0
+2024-03-04 20:06:09,040 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:06:09,040 - Rate limit: 32
+2024-03-04 20:06:09,040 - Rate limit reset: 1558.0
+2024-03-04 20:06:09,047 - 127.0.0.1 - - [04/Mar/2024 20:06:09] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:06:09,076 - 127.0.0.1 - - [04/Mar/2024 20:06:09] "GET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-03-04 20:06:09,080 - 127.0.0.1 - - [04/Mar/2024 20:06:09] "GET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-03-04 20:06:09,098 - 127.0.0.1 - - [04/Mar/2024 20:06:09] "GET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-03-04 20:06:09,257 - 127.0.0.1 - - [04/Mar/2024 20:06:09] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:06:52,540 - Página principal solicitada
+2024-03-04 20:06:52,540 - 127.0.0.1 - - [04/Mar/2024 20:06:52] "GET / HTTP/1.1" 200 -
+2024-03-04 20:06:52,559 - 127.0.0.1 - - [04/Mar/2024 20:06:52] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:06:52,560 - 127.0.0.1 - - [04/Mar/2024 20:06:52] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:06:53,826 - 127.0.0.1 - - [04/Mar/2024 20:06:53] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:06:53,855 - 127.0.0.1 - - [04/Mar/2024 20:06:53] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:06:53,855 - 127.0.0.1 - - [04/Mar/2024 20:06:53] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:07:01,331 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:07:01,333 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:07:01,873 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:07:01,873 - Rate limit: 31
+2024-03-04 20:07:01,873 - Rate limit reset: 1506.0
+2024-03-04 20:07:01,879 - 127.0.0.1 - - [04/Mar/2024 20:07:01] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:07:01,896 - 127.0.0.1 - - [04/Mar/2024 20:07:01] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:07:01,896 - 127.0.0.1 - - [04/Mar/2024 20:07:01] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:07:01,927 - 127.0.0.1 - - [04/Mar/2024 20:07:01] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:07:02,063 - 127.0.0.1 - - [04/Mar/2024 20:07:02] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:07:12,194 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:07:12,195 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:07:12,197 -  * Restarting with stat
+2024-03-04 20:07:13,676 -  * Debugger is active!
+2024-03-04 20:07:13,687 -  * Debugger PIN: 429-237-722
+2024-03-04 20:07:18,248 - Página principal solicitada
+2024-03-04 20:07:18,248 - 127.0.0.1 - - [04/Mar/2024 20:07:18] "GET / HTTP/1.1" 200 -
+2024-03-04 20:07:18,266 - 127.0.0.1 - - [04/Mar/2024 20:07:18] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:07:18,267 - 127.0.0.1 - - [04/Mar/2024 20:07:18] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:07:19,375 - 127.0.0.1 - - [04/Mar/2024 20:07:19] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:07:19,408 - 127.0.0.1 - - [04/Mar/2024 20:07:19] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:07:19,408 - 127.0.0.1 - - [04/Mar/2024 20:07:19] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:07:31,103 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:07:31,104 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:07:31,692 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:07:31,693 - Rate limit: 30
+2024-03-04 20:07:31,693 - Rate limit reset: 1476.0
+2024-03-04 20:07:31,699 - 127.0.0.1 - - [04/Mar/2024 20:07:31] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:07:31,715 - 127.0.0.1 - - [04/Mar/2024 20:07:31] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:07:31,716 - 127.0.0.1 - - [04/Mar/2024 20:07:31] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:07:31,744 - 127.0.0.1 - - [04/Mar/2024 20:07:31] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:07:31,880 - 127.0.0.1 - - [04/Mar/2024 20:07:31] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:08:45,730 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:08:45,777 -  * Restarting with stat
+2024-03-04 20:08:45,939 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:08:46,182 -  * Debugger is active!
+2024-03-04 20:08:46,191 -  * Debugger PIN: 143-611-746
+2024-03-04 20:09:11,230 - Página principal solicitada
+2024-03-04 20:09:11,233 - 127.0.0.1 - - [04/Mar/2024 20:09:11] "GET / HTTP/1.1" 200 -
+2024-03-04 20:09:11,377 - 127.0.0.1 - - [04/Mar/2024 20:09:11] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:09:11,384 - 127.0.0.1 - - [04/Mar/2024 20:09:11] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:09:12,505 - 127.0.0.1 - - [04/Mar/2024 20:09:12] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:09:12,540 - 127.0.0.1 - - [04/Mar/2024 20:09:12] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:09:12,541 - 127.0.0.1 - - [04/Mar/2024 20:09:12] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:09:20,477 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:09:20,479 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:09:21,062 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:09:21,062 - Rate limit: 29
+2024-03-04 20:09:21,062 - Rate limit reset: 1366.0
+2024-03-04 20:09:21,063 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:09:21,215 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:09:21,215 - Rate limit: 28
+2024-03-04 20:09:21,215 - Rate limit reset: 1366.0
+2024-03-04 20:09:21,359 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:09:21,360 - Rate limit: 27
+2024-03-04 20:09:21,360 - Rate limit reset: 1366.0
+2024-03-04 20:09:21,366 - 127.0.0.1 - - [04/Mar/2024 20:09:21] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:09:21,387 - 127.0.0.1 - - [04/Mar/2024 20:09:21] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:09:21,388 - 127.0.0.1 - - [04/Mar/2024 20:09:21] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:09:21,418 - 127.0.0.1 - - [04/Mar/2024 20:09:21] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:09:21,555 - 127.0.0.1 - - [04/Mar/2024 20:09:21] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:09:40,396 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:09:40,397 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:09:40,399 -  * Restarting with stat
+2024-03-04 20:09:41,815 -  * Debugger is active!
+2024-03-04 20:09:41,825 -  * Debugger PIN: 429-237-722
+2024-03-04 20:09:44,508 - Página principal solicitada
+2024-03-04 20:09:44,509 - 127.0.0.1 - - [04/Mar/2024 20:09:44] "GET / HTTP/1.1" 200 -
+2024-03-04 20:09:44,529 - 127.0.0.1 - - [04/Mar/2024 20:09:44] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:09:44,530 - 127.0.0.1 - - [04/Mar/2024 20:09:44] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:09:47,302 - 127.0.0.1 - - [04/Mar/2024 20:09:47] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:09:47,339 - 127.0.0.1 - - [04/Mar/2024 20:09:47] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:09:47,340 - 127.0.0.1 - - [04/Mar/2024 20:09:47] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:09:59,610 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:09:59,611 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:10:00,143 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:10:00,144 - Rate limit: 26
+2024-03-04 20:10:00,144 - Rate limit reset: 1327.0
+2024-03-04 20:10:00,150 - 127.0.0.1 - - [04/Mar/2024 20:10:00] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:10:00,168 - 127.0.0.1 - - [04/Mar/2024 20:10:00] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:10:00,168 - 127.0.0.1 - - [04/Mar/2024 20:10:00] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:10:00,200 - 127.0.0.1 - - [04/Mar/2024 20:10:00] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:10:00,335 - 127.0.0.1 - - [04/Mar/2024 20:10:00] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:11:28,081 -  * Detected change in 'C:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:11:28,254 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:11:28,302 -  * Restarting with stat
+2024-03-04 20:11:28,693 -  * Debugger is active!
+2024-03-04 20:11:28,702 -  * Debugger PIN: 143-611-746
+2024-03-04 20:11:41,413 - Página principal solicitada
+2024-03-04 20:11:41,415 - 127.0.0.1 - - [04/Mar/2024 20:11:41] "GET / HTTP/1.1" 200 -
+2024-03-04 20:11:41,558 - 127.0.0.1 - - [04/Mar/2024 20:11:41] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:11:41,564 - 127.0.0.1 - - [04/Mar/2024 20:11:41] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:11:42,578 - 127.0.0.1 - - [04/Mar/2024 20:11:42] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:11:42,612 - 127.0.0.1 - - [04/Mar/2024 20:11:42] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:11:42,613 - 127.0.0.1 - - [04/Mar/2024 20:11:42] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:11:50,021 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:11:50,023 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:11:50,581 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:11:50,581 - Rate limit: 25
+2024-03-04 20:11:50,581 - Rate limit reset: 1217.0
+2024-03-04 20:11:50,582 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:11:50,743 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:11:50,744 - Rate limit: 24
+2024-03-04 20:11:50,744 - Rate limit reset: 1217.0
+2024-03-04 20:11:50,889 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:11:50,889 - Rate limit: 23
+2024-03-04 20:11:50,889 - Rate limit reset: 1217.0
+2024-03-04 20:11:50,897 - 127.0.0.1 - - [04/Mar/2024 20:11:50] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:11:50,917 - 127.0.0.1 - - [04/Mar/2024 20:11:50] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:11:50,917 - 127.0.0.1 - - [04/Mar/2024 20:11:50] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:11:50,952 - 127.0.0.1 - - [04/Mar/2024 20:11:50] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:11:51,089 - 127.0.0.1 - - [04/Mar/2024 20:11:51] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:12:07,956 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:12:07,997 -  * Restarting with stat
+2024-03-04 20:12:08,379 -  * Debugger is active!
+2024-03-04 20:12:08,389 -  * Debugger PIN: 143-611-746
+2024-03-04 20:12:54,878 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:12:54,915 -  * Restarting with stat
+2024-03-04 20:12:55,306 -  * Debugger is active!
+2024-03-04 20:12:55,314 -  * Debugger PIN: 143-611-746
+2024-03-04 20:13:12,917 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:13:12,954 -  * Restarting with stat
+2024-03-04 20:13:13,339 -  * Debugger is active!
+2024-03-04 20:13:13,348 -  * Debugger PIN: 143-611-746
+2024-03-04 20:13:24,762 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:13:24,810 -  * Restarting with stat
+2024-03-04 20:14:10,737 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:14:10,737 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:14:10,741 -  * Restarting with stat
+2024-03-04 20:14:11,115 -  * Debugger is active!
+2024-03-04 20:14:11,125 -  * Debugger PIN: 143-611-746
+2024-03-04 20:14:14,828 - Página principal solicitada
+2024-03-04 20:14:14,830 - 127.0.0.1 - - [04/Mar/2024 20:14:14] "GET / HTTP/1.1" 200 -
+2024-03-04 20:14:14,959 - 127.0.0.1 - - [04/Mar/2024 20:14:14] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:14:14,971 - 127.0.0.1 - - [04/Mar/2024 20:14:14] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:14:16,245 - 127.0.0.1 - - [04/Mar/2024 20:14:16] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:14:16,273 - 127.0.0.1 - - [04/Mar/2024 20:14:16] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:14:16,274 - 127.0.0.1 - - [04/Mar/2024 20:14:16] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:14:24,210 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:14:24,213 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:14:24,765 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:14:24,767 - Rate limit: 9
+2024-03-04 20:14:24,767 - Rate limit reset: 1063.0
+2024-03-04 20:14:24,767 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:14:24,776 - 127.0.0.1 - - [04/Mar/2024 20:14:24] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:14:24,794 - 127.0.0.1 - - [04/Mar/2024 20:14:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:14:24,795 - 127.0.0.1 - - [04/Mar/2024 20:14:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:14:24,828 - 127.0.0.1 - - [04/Mar/2024 20:14:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:14:24,971 - 127.0.0.1 - - [04/Mar/2024 20:14:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:30:24,866 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:30:24,866 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:30:24,869 -  * Restarting with stat
+2024-03-04 20:30:25,258 -  * Debugger is active!
+2024-03-04 20:30:25,269 -  * Debugger PIN: 143-611-746
+2024-03-04 20:30:29,076 - Página principal solicitada
+2024-03-04 20:30:29,078 - 127.0.0.1 - - [04/Mar/2024 20:30:29] "GET / HTTP/1.1" 200 -
+2024-03-04 20:30:29,228 - 127.0.0.1 - - [04/Mar/2024 20:30:29] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:30:29,232 - 127.0.0.1 - - [04/Mar/2024 20:30:29] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:30:30,978 - 127.0.0.1 - - [04/Mar/2024 20:30:30] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:30:31,013 - 127.0.0.1 - - [04/Mar/2024 20:30:31] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:30:31,015 - 127.0.0.1 - - [04/Mar/2024 20:30:31] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:30:37,336 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:30:37,339 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:30:37,907 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:30:37,909 - Rate limit: 8
+2024-03-04 20:30:37,910 - Rate limit reset: 90.0
+2024-03-04 20:30:37,910 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:30:37,920 - 127.0.0.1 - - [04/Mar/2024 20:30:37] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:30:37,943 - 127.0.0.1 - - [04/Mar/2024 20:30:37] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:30:37,944 - 127.0.0.1 - - [04/Mar/2024 20:30:37] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:30:37,981 - 127.0.0.1 - - [04/Mar/2024 20:30:37] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:30:38,116 - 127.0.0.1 - - [04/Mar/2024 20:30:38] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:36:47,968 - Página principal solicitada
+2024-03-04 20:36:47,968 - 127.0.0.1 - - [04/Mar/2024 20:36:47] "GET / HTTP/1.1" 200 -
+2024-03-04 20:36:47,990 - 127.0.0.1 - - [04/Mar/2024 20:36:47] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:36:47,990 - 127.0.0.1 - - [04/Mar/2024 20:36:47] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:36:49,096 - 127.0.0.1 - - [04/Mar/2024 20:36:49] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:36:49,123 - 127.0.0.1 - - [04/Mar/2024 20:36:49] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:36:49,123 - 127.0.0.1 - - [04/Mar/2024 20:36:49] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:37:57,703 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:37:57,703 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:37:58,303 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:37:58,303 - Rate limit: 59
+2024-03-04 20:37:58,303 - Rate limit reset: 3598.0
+2024-03-04 20:37:58,304 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:37:58,467 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:37:58,467 - Rate limit: 58
+2024-03-04 20:37:58,467 - Rate limit reset: 3598.0
+2024-03-04 20:37:58,629 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:37:58,629 - Rate limit: 57
+2024-03-04 20:37:58,629 - Rate limit reset: 3598.0
+2024-03-04 20:37:58,634 - 127.0.0.1 - - [04/Mar/2024 20:37:58] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:39:40,682 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:39:40,723 -  * Restarting with stat
+2024-03-04 20:39:41,135 -  * Debugger is active!
+2024-03-04 20:39:41,145 -  * Debugger PIN: 143-611-746
+2024-03-04 20:39:57,092 - Página principal solicitada
+2024-03-04 20:39:57,094 - 127.0.0.1 - - [04/Mar/2024 20:39:57] "GET / HTTP/1.1" 200 -
+2024-03-04 20:39:57,256 - 127.0.0.1 - - [04/Mar/2024 20:39:57] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:39:57,259 - 127.0.0.1 - - [04/Mar/2024 20:39:57] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:39:58,388 - 127.0.0.1 - - [04/Mar/2024 20:39:58] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:39:58,414 - 127.0.0.1 - - [04/Mar/2024 20:39:58] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:39:58,415 - 127.0.0.1 - - [04/Mar/2024 20:39:58] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:40:06,201 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:40:06,203 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:40:06,822 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:40:06,822 - Rate limit: 56
+2024-03-04 20:40:06,822 - Rate limit reset: 3470.0
+2024-03-04 20:40:06,823 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:40:06,969 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:40:06,969 - Rate limit: 55
+2024-03-04 20:40:06,969 - Rate limit reset: 3470.0
+2024-03-04 20:40:07,120 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:40:07,121 - Rate limit: 54
+2024-03-04 20:40:07,121 - Rate limit reset: 3469.0
+2024-03-04 20:40:07,124 - 127.0.0.1 - - [04/Mar/2024 20:40:07] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:41:14,167 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:41:14,204 -  * Restarting with stat
+2024-03-04 20:41:14,601 -  * Debugger is active!
+2024-03-04 20:41:14,611 -  * Debugger PIN: 143-611-746
+2024-03-04 20:41:43,566 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:41:43,603 -  * Restarting with stat
+2024-03-04 20:41:44,021 -  * Debugger is active!
+2024-03-04 20:41:44,030 -  * Debugger PIN: 143-611-746
+2024-03-04 20:41:49,884 - Página principal solicitada
+2024-03-04 20:41:49,887 - 127.0.0.1 - - [04/Mar/2024 20:41:49] "GET / HTTP/1.1" 200 -
+2024-03-04 20:41:50,034 - 127.0.0.1 - - [04/Mar/2024 20:41:50] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:41:50,041 - 127.0.0.1 - - [04/Mar/2024 20:41:50] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:42:26,559 - 127.0.0.1 - - [04/Mar/2024 20:42:26] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:42:26,577 - 127.0.0.1 - - [04/Mar/2024 20:42:26] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:42:26,578 - 127.0.0.1 - - [04/Mar/2024 20:42:26] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:42:37,575 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:42:37,578 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:42:38,156 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:42:38,158 - Rate limit: 53
+2024-03-04 20:42:38,158 - Rate limit reset: 3318.0
+2024-03-04 20:42:38,159 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:42:38,322 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:42:38,322 - Rate limit: 52
+2024-03-04 20:42:38,322 - Rate limit reset: 3318.0
+2024-03-04 20:42:38,477 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:42:38,478 - Rate limit: 51
+2024-03-04 20:42:38,478 - Rate limit reset: 3318.0
+2024-03-04 20:42:38,481 - 127.0.0.1 - - [04/Mar/2024 20:42:38] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:42:42,544 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:42:42,545 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:42:42,924 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:42:42,925 - Rate limit: 50
+2024-03-04 20:42:42,925 - Rate limit reset: 3314.0
+2024-03-04 20:42:42,927 - 127.0.0.1 - - [04/Mar/2024 20:42:42] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:42:50,259 - 127.0.0.1 - - [04/Mar/2024 20:42:50] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:43:13,907 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:43:13,949 -  * Restarting with stat
+2024-03-04 20:43:14,351 -  * Debugger is active!
+2024-03-04 20:43:14,361 -  * Debugger PIN: 143-611-746
+2024-03-04 20:43:23,611 - 127.0.0.1 - - [04/Mar/2024 20:43:23] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:43:23,743 - 127.0.0.1 - - [04/Mar/2024 20:43:23] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:43:23,751 - 127.0.0.1 - - [04/Mar/2024 20:43:23] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:43:29,672 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:43:29,674 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:43:30,217 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:43:30,217 - Rate limit: 49
+2024-03-04 20:43:30,217 - Rate limit reset: 3266.0
+2024-03-04 20:43:30,218 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:43:30,367 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:43:30,368 - Rate limit: 48
+2024-03-04 20:43:30,368 - Rate limit reset: 3266.0
+2024-03-04 20:43:30,514 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:43:30,514 - Rate limit: 47
+2024-03-04 20:43:30,514 - Rate limit reset: 3266.0
+2024-03-04 20:43:30,519 - 127.0.0.1 - - [04/Mar/2024 20:43:30] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:44:31,848 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:44:31,887 -  * Restarting with stat
+2024-03-04 20:44:32,273 -  * Debugger is active!
+2024-03-04 20:44:32,282 -  * Debugger PIN: 143-611-746
+2024-03-04 20:44:34,770 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:44:34,773 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:44:35,369 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:44:35,371 - Rate limit: 46
+2024-03-04 20:44:35,371 - Rate limit reset: 3201.0
+2024-03-04 20:44:35,372 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:44:35,527 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:44:35,527 - Rate limit: 45
+2024-03-04 20:44:35,527 - Rate limit reset: 3201.0
+2024-03-04 20:44:35,677 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:44:35,677 - Rate limit: 44
+2024-03-04 20:44:35,677 - Rate limit reset: 3201.0
+2024-03-04 20:44:35,683 - 127.0.0.1 - - [04/Mar/2024 20:44:35] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:44:39,488 - Página principal solicitada
+2024-03-04 20:44:39,489 - 127.0.0.1 - - [04/Mar/2024 20:44:39] "GET / HTTP/1.1" 200 -
+2024-03-04 20:44:39,626 - 127.0.0.1 - - [04/Mar/2024 20:44:39] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:44:39,641 - 127.0.0.1 - - [04/Mar/2024 20:44:39] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:44:40,546 - 127.0.0.1 - - [04/Mar/2024 20:44:40] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:44:40,570 - 127.0.0.1 - - [04/Mar/2024 20:44:40] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:44:40,571 - 127.0.0.1 - - [04/Mar/2024 20:44:40] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:44:43,162 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:44:43,163 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:44:43,554 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:44:43,554 - Rate limit: 43
+2024-03-04 20:44:43,554 - Rate limit reset: 3193.0
+2024-03-04 20:44:43,559 - 127.0.0.1 - - [04/Mar/2024 20:44:43] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:47:51,604 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:47:51,638 -  * Restarting with stat
+2024-03-04 20:47:52,029 -  * Debugger is active!
+2024-03-04 20:47:52,038 -  * Debugger PIN: 143-611-746
+2024-03-04 20:48:16,171 - Página principal solicitada
+2024-03-04 20:48:16,173 - 127.0.0.1 - - [04/Mar/2024 20:48:16] "GET / HTTP/1.1" 200 -
+2024-03-04 20:48:16,311 - 127.0.0.1 - - [04/Mar/2024 20:48:16] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:48:16,324 - 127.0.0.1 - - [04/Mar/2024 20:48:16] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:48:17,757 - 127.0.0.1 - - [04/Mar/2024 20:48:17] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:48:17,793 - 127.0.0.1 - - [04/Mar/2024 20:48:17] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:48:17,793 - 127.0.0.1 - - [04/Mar/2024 20:48:17] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:48:23,604 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:48:23,607 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:48:24,231 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:48:24,232 - Rate limit: 42
+2024-03-04 20:48:24,232 - Rate limit reset: 2972.0
+2024-03-04 20:48:24,232 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:48:24,389 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:48:24,389 - Rate limit: 41
+2024-03-04 20:48:24,389 - Rate limit reset: 2972.0
+2024-03-04 20:48:24,542 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:48:24,542 - Rate limit: 40
+2024-03-04 20:48:24,542 - Rate limit reset: 2972.0
+2024-03-04 20:48:24,551 - 127.0.0.1 - - [04/Mar/2024 20:48:24] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:48:24,571 - 127.0.0.1 - - [04/Mar/2024 20:48:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:48:24,572 - 127.0.0.1 - - [04/Mar/2024 20:48:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:48:24,603 - 127.0.0.1 - - [04/Mar/2024 20:48:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:48:24,743 - 127.0.0.1 - - [04/Mar/2024 20:48:24] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:49:47,663 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:49:47,706 -  * Restarting with stat
+2024-03-04 20:49:48,116 -  * Debugger is active!
+2024-03-04 20:49:48,125 -  * Debugger PIN: 143-611-746
+2024-03-04 20:49:51,254 - Página principal solicitada
+2024-03-04 20:49:51,257 - 127.0.0.1 - - [04/Mar/2024 20:49:51] "GET / HTTP/1.1" 200 -
+2024-03-04 20:49:51,392 - 127.0.0.1 - - [04/Mar/2024 20:49:51] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:49:51,406 - 127.0.0.1 - - [04/Mar/2024 20:49:51] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:49:52,380 - 127.0.0.1 - - [04/Mar/2024 20:49:52] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:49:52,410 - 127.0.0.1 - - [04/Mar/2024 20:49:52] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:49:52,410 - 127.0.0.1 - - [04/Mar/2024 20:49:52] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:49:57,659 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:49:57,661 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:49:58,278 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:49:58,278 - Rate limit: 39
+2024-03-04 20:49:58,279 - Rate limit reset: 2878.0
+2024-03-04 20:49:58,279 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:49:58,458 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:49:58,458 - Rate limit: 38
+2024-03-04 20:49:58,458 - Rate limit reset: 2878.0
+2024-03-04 20:49:58,608 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:49:58,609 - Rate limit: 37
+2024-03-04 20:49:58,609 - Rate limit reset: 2878.0
+2024-03-04 20:49:58,617 - 127.0.0.1 - - [04/Mar/2024 20:49:58] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:49:58,640 - 127.0.0.1 - - [04/Mar/2024 20:49:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:49:58,640 - 127.0.0.1 - - [04/Mar/2024 20:49:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:49:58,669 - 127.0.0.1 - - [04/Mar/2024 20:49:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:49:58,811 - 127.0.0.1 - - [04/Mar/2024 20:49:58] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:50:08,831 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:50:08,877 -  * Restarting with stat
+2024-03-04 20:50:09,277 -  * Debugger is active!
+2024-03-04 20:50:09,287 -  * Debugger PIN: 143-611-746
+2024-03-04 20:50:12,929 - Página principal solicitada
+2024-03-04 20:50:12,931 - 127.0.0.1 - - [04/Mar/2024 20:50:12] "GET / HTTP/1.1" 200 -
+2024-03-04 20:50:13,073 - 127.0.0.1 - - [04/Mar/2024 20:50:13] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:50:13,077 - 127.0.0.1 - - [04/Mar/2024 20:50:13] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:50:14,281 - 127.0.0.1 - - [04/Mar/2024 20:50:14] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:50:14,312 - 127.0.0.1 - - [04/Mar/2024 20:50:14] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:50:14,312 - 127.0.0.1 - - [04/Mar/2024 20:50:14] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:50:17,216 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:50:17,219 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:50:17,611 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:50:17,612 - Rate limit: 36
+2024-03-04 20:50:17,612 - Rate limit reset: 2859.0
+2024-03-04 20:50:17,612 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:50:17,655 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:50:17,656 - Rate limit: 35
+2024-03-04 20:50:17,656 - Rate limit reset: 2859.0
+2024-03-04 20:50:17,699 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:50:17,699 - Rate limit: 34
+2024-03-04 20:50:17,699 - Rate limit reset: 2859.0
+2024-03-04 20:50:17,704 - 127.0.0.1 - - [04/Mar/2024 20:50:17] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:51:09,281 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:51:09,283 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:51:09,866 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:51:09,866 - Rate limit: 33
+2024-03-04 20:51:09,866 - Rate limit reset: 2807.0
+2024-03-04 20:51:09,872 - 127.0.0.1 - - [04/Mar/2024 20:51:09] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:51:29,036 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:51:29,037 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:51:29,039 -  * Restarting with stat
+2024-03-04 20:51:30,448 -  * Debugger is active!
+2024-03-04 20:51:30,458 -  * Debugger PIN: 429-237-722
+2024-03-04 20:51:49,670 - Página principal solicitada
+2024-03-04 20:51:49,671 - 127.0.0.1 - - [04/Mar/2024 20:51:49] "GET / HTTP/1.1" 200 -
+2024-03-04 20:51:49,690 - 127.0.0.1 - - [04/Mar/2024 20:51:49] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:51:49,691 - 127.0.0.1 - - [04/Mar/2024 20:51:49] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:51:50,640 - 127.0.0.1 - - [04/Mar/2024 20:51:50] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:51:50,665 - 127.0.0.1 - - [04/Mar/2024 20:51:50] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:51:50,667 - 127.0.0.1 - - [04/Mar/2024 20:51:50] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:51:55,416 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:51:55,417 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:51:55,959 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:51:55,959 - Rate limit: 32
+2024-03-04 20:51:55,959 - Rate limit reset: 2761.0
+2024-03-04 20:51:55,964 - 127.0.0.1 - - [04/Mar/2024 20:51:55] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:52:12,216 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-04 20:52:12,217 - [33mPress CTRL+C to quit[0m
+2024-03-04 20:52:12,219 -  * Restarting with stat
+2024-03-04 20:52:34,936 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:52:34,976 -  * Restarting with stat
+2024-03-04 20:52:35,387 -  * Debugger is active!
+2024-03-04 20:52:35,397 -  * Debugger PIN: 143-611-746
+2024-03-04 20:52:45,779 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:52:45,811 -  * Restarting with stat
+2024-03-04 20:52:46,197 -  * Debugger is active!
+2024-03-04 20:52:46,205 -  * Debugger PIN: 143-611-746
+2024-03-04 20:54:09,174 - Página principal solicitada
+2024-03-04 20:54:09,177 - 127.0.0.1 - - [04/Mar/2024 20:54:09] "GET / HTTP/1.1" 200 -
+2024-03-04 20:54:09,321 - 127.0.0.1 - - [04/Mar/2024 20:54:09] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:54:09,327 - 127.0.0.1 - - [04/Mar/2024 20:54:09] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:54:10,134 - 127.0.0.1 - - [04/Mar/2024 20:54:10] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:54:10,158 - 127.0.0.1 - - [04/Mar/2024 20:54:10] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:54:10,158 - 127.0.0.1 - - [04/Mar/2024 20:54:10] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:54:15,057 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:54:15,059 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:54:15,644 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:54:15,645 - Rate limit: 31
+2024-03-04 20:54:15,645 - Rate limit reset: 2621.0
+2024-03-04 20:54:15,645 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:54:15,809 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:54:15,809 - Rate limit: 30
+2024-03-04 20:54:15,809 - Rate limit reset: 2621.0
+2024-03-04 20:54:15,982 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:54:15,982 - Rate limit: 29
+2024-03-04 20:54:15,982 - Rate limit reset: 2621.0
+2024-03-04 20:54:15,985 - 127.0.0.1 - - [04/Mar/2024 20:54:15] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:56:35,391 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:56:35,431 -  * Restarting with stat
+2024-03-04 20:56:35,855 -  * Debugger is active!
+2024-03-04 20:56:35,866 -  * Debugger PIN: 143-611-746
+2024-03-04 20:56:42,085 - Página principal solicitada
+2024-03-04 20:56:42,087 - 127.0.0.1 - - [04/Mar/2024 20:56:42] "GET / HTTP/1.1" 200 -
+2024-03-04 20:56:42,228 - 127.0.0.1 - - [04/Mar/2024 20:56:42] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:56:42,241 - 127.0.0.1 - - [04/Mar/2024 20:56:42] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:56:43,655 - 127.0.0.1 - - [04/Mar/2024 20:56:43] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:56:43,681 - 127.0.0.1 - - [04/Mar/2024 20:56:43] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:56:43,681 - 127.0.0.1 - - [04/Mar/2024 20:56:43] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:56:46,627 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:56:46,629 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:56:47,215 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:56:47,215 - Rate limit: 28
+2024-03-04 20:56:47,215 - Rate limit reset: 2469.0
+2024-03-04 20:56:47,216 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:56:47,375 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:56:47,375 - Rate limit: 27
+2024-03-04 20:56:47,375 - Rate limit reset: 2469.0
+2024-03-04 20:56:47,546 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:56:47,546 - Rate limit: 26
+2024-03-04 20:56:47,546 - Rate limit reset: 2469.0
+2024-03-04 20:56:47,572 - 127.0.0.1 - - [04/Mar/2024 20:56:47] "[35m[1mPOST /userrepo HTTP/1.1[0m" 500 -
+2024-03-04 20:56:47,590 - 127.0.0.1 - - [04/Mar/2024 20:56:47] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-03-04 20:56:47,591 - 127.0.0.1 - - [04/Mar/2024 20:56:47] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-03-04 20:56:47,616 - 127.0.0.1 - - [04/Mar/2024 20:56:47] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:56:47,762 - 127.0.0.1 - - [04/Mar/2024 20:56:47] "[36mGET /userrepo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-03-04 20:57:13,554 - Página principal solicitada
+2024-03-04 20:57:13,554 - 127.0.0.1 - - [04/Mar/2024 20:57:13] "GET / HTTP/1.1" 200 -
+2024-03-04 20:57:13,573 - 127.0.0.1 - - [04/Mar/2024 20:57:13] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:57:13,573 - 127.0.0.1 - - [04/Mar/2024 20:57:13] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:57:14,800 - 127.0.0.1 - - [04/Mar/2024 20:57:14] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:57:14,830 - 127.0.0.1 - - [04/Mar/2024 20:57:14] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:57:14,831 - 127.0.0.1 - - [04/Mar/2024 20:57:14] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:57:17,893 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:57:17,895 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:57:18,431 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:57:18,431 - Rate limit: 25
+2024-03-04 20:57:18,431 - Rate limit reset: 2438.0
+2024-03-04 20:57:18,435 - 127.0.0.1 - - [04/Mar/2024 20:57:18] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:58:45,958 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:58:45,999 -  * Restarting with stat
+2024-03-04 20:58:46,390 -  * Debugger is active!
+2024-03-04 20:58:46,400 -  * Debugger PIN: 143-611-746
+2024-03-04 20:58:48,218 - Página principal solicitada
+2024-03-04 20:58:48,220 - 127.0.0.1 - - [04/Mar/2024 20:58:48] "GET / HTTP/1.1" 200 -
+2024-03-04 20:58:48,356 - 127.0.0.1 - - [04/Mar/2024 20:58:48] "[36mGET /static/mainpage.css HTTP/1.1[0m" 304 -
+2024-03-04 20:58:48,366 - 127.0.0.1 - - [04/Mar/2024 20:58:48] "[36mGET /static/mainpage.js HTTP/1.1[0m" 304 -
+2024-03-04 20:58:49,280 - 127.0.0.1 - - [04/Mar/2024 20:58:49] "GET /userrepo HTTP/1.1" 200 -
+2024-03-04 20:58:49,309 - 127.0.0.1 - - [04/Mar/2024 20:58:49] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
+2024-03-04 20:58:49,310 - 127.0.0.1 - - [04/Mar/2024 20:58:49] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
+2024-03-04 20:58:51,929 - Get GitHub paginated items from https://api.github.com/repos/raulgc10/OSSAnalyzer/issues
+2024-03-04 20:58:51,932 - Starting new HTTPS connection (1): api.github.com:443
+2024-03-04 20:58:52,501 - https://api.github.com:443 "GET /repos/raulgc10/OSSAnalyzer/issues?state=all&per_page=100&direction=asc&sort=updated&since=1970-01-01T00%3A00%3A00%2B00%3A00 HTTP/1.1" 200 1141
+2024-03-04 20:58:52,502 - Rate limit: 24
+2024-03-04 20:58:52,502 - Rate limit reset: 2344.0
+2024-03-04 20:58:52,502 - Getting info for https://api.github.com/users/raulgc10
+2024-03-04 20:58:52,663 - https://api.github.com:443 "GET /users/raulgc10 HTTP/1.1" 200 450
+2024-03-04 20:58:52,663 - Rate limit: 23
+2024-03-04 20:58:52,663 - Rate limit reset: 2344.0
+2024-03-04 20:58:52,820 - https://api.github.com:443 "GET /users/raulgc10/orgs HTTP/1.1" 200 2
+2024-03-04 20:58:52,820 - Rate limit: 22
+2024-03-04 20:58:52,820 - Rate limit reset: 2344.0
+2024-03-04 20:58:52,823 - 127.0.0.1 - - [04/Mar/2024 20:58:52] "POST /userrepo HTTP/1.1" 200 -
+2024-03-04 20:59:05,053 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\utils.py', reloading
+2024-03-04 20:59:05,092 -  * Restarting with stat
+2024-03-04 20:59:05,487 -  * Debugger is active!
+2024-03-04 20:59:05,497 -  * Debugger PIN: 143-611-746
+2024-03-04 20:59:08,660 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:59:08,696 -  * Restarting with stat
+2024-03-04 20:59:09,081 -  * Debugger is active!
+2024-03-04 20:59:09,091 -  * Debugger PIN: 143-611-746
+2024-03-04 20:59:10,186 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\mainmenu.py', reloading
+2024-03-04 20:59:10,223 -  * Restarting with stat
+2024-03-04 20:59:10,625 -  * Debugger is active!
+2024-03-04 20:59:10,634 -  * Debugger PIN: 143-611-746

@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-from obtener_issues import obtener_issues_personal
+from flask import Flask, render_template, request, jsonify
+from utils import obtener_issues_personal
 import logging
 import json
 
@@ -63,8 +63,8 @@ def userrepo():
     elif request.method == 'POST':
             username = request.form['username']
             reponame = request.form['repo']
-            info = obtener_issues_personal(username, reponame)
-            return render_template("mainpage.html")
+            repository_data = obtener_issues_personal(username, reponame)
+            return render_template("userrepoResult.html",info=repository_data)
     else:
         return "Error al procesar la petición"
 
