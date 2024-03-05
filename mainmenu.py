@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-import obtener_issues
+from flask import Flask, render_template, request, jsonify
+from utils import obtener_issues_personal
 import logging
 import json
 
@@ -44,15 +44,30 @@ logging.basicConfig(level=logs[0], filename=logs[1], format=logs[2])
 
 # Define la ruta principal en la que se darán diferentes opciones al usuario para obtener los datos de los repositorios de github
 @app.route('/', methods=['GET'])
-def index():
+def mainpage_html():
     app.logger.info("Página principal solicitada")
     return render_template("mainpage.html")
 
+@app.route('/mainpage.js', methods=['GET'])
+def mainpage_js():
+    return render_template("mainpage.js")
 
-# Define una ruta (endpoint) y la función que manejará las solicitudes en esa ruta
-# @app.route('/userrepo', methods=['GET', 'POST'])
-#
-# @app.route('/url', methods=['GET', 'POST'])
+@app.route('/mainpage.css', methods=['GET'])
+def mainpage_css():
+    return render_template("mainpage.css")
+
+@app.route('/userrepo', methods=['GET','POST']) 
+def userrepo():
+    if request.method == 'GET':
+            return render_template("formulario.html")
+    elif request.method == 'POST':
+            username = request.form['username']
+            reponame = request.form['repo']
+            repository_data = obtener_issues_personal(username, reponame)
+            return render_template("userrepoResult.html",info=repository_data)
+    else:
+        return "Error al procesar la petición"
+
 
 # Ejecuta la aplicación
 if __name__ == '__main__':
