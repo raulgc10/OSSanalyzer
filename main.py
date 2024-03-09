@@ -1,15 +1,12 @@
 from flask import Flask, render_template, request, jsonify
-from utils import obtener_issues_personal
+from utils import obtener_issues_personal, config_load
 import logging
 import json
+from web import create_app
 
 
-# Función para cargar la configuración del programa que viene de un fichero de configuración en formato JSON
-def configload(config_file):
-    with open(config_file, "r") as file:
-        configs = json.load(file)
-    return configs
-
+# Crea una instancia de la aplicación Flask
+app = create_app()
 
 # Función para obtener el puerto
 def ip_port_load():
@@ -28,46 +25,15 @@ def log_load():
 
 
 # Obtenemos el fichero de configuración
-config = configload("config/OSSAnalyzerconfig.json")
+config = config_load("config/OSSAnalyzerconfig.json")
 
 # Cargamos el puerto y la config de logs
 port = ip_port_load()[0]
 ip = ip_port_load()[1]
 logs = log_load()
 
-# Crea una instancia de la aplicación Flask
-app = Flask(__name__)
-
 # Crea logs del programa
 logging.basicConfig(level=logs[0], filename=logs[1], format=logs[2])
-
-
-# Define la ruta principal en la que se darán diferentes opciones al usuario para obtener los datos de los repositorios de github
-@app.route('/', methods=['GET'])
-def mainpage_html():
-    app.logger.info("Página principal solicitada")
-    return render_template("mainpage.html")
-
-@app.route('/mainpage.js', methods=['GET'])
-def mainpage_js():
-    return render_template("mainpage.js")
-
-@app.route('/mainpage.css', methods=['GET'])
-def mainpage_css():
-    return render_template("mainpage.css")
-
-@app.route('/userrepo', methods=['GET','POST']) 
-def userrepo():
-    if request.method == 'GET':
-            return render_template("formulario.html")
-    elif request.method == 'POST':
-            username = request.form['username']
-            reponame = request.form['repo']
-            repository_data = obtener_issues_personal(username, reponame)
-            return render_template("userrepoResult.html",info=repository_data)
-    else:
-        return "Error al procesar la petición"
-
 
 # Ejecuta la aplicación
 if __name__ == '__main__':
