@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="\static\formulario.js" defer></script>
-        <link rel="stylesheet" href="\static\formulario.css">
-        <title>OSSAnalyzer</title>
-    </head>
-    <body>
+{% extends "base.html" %} 
+{% block title %}Userrepo{% endblock %}
+{% block content %}
+</br>
+<form action="/userrepo" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario de Github">
+        <label for="username">Nombre de usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="repo" name="repo" placeholder="Nombre del repositorio">
+        <label for="repo">Nombre del repositorio</label>
+      </div>
+    </br>
+    <button class="btn btn-dark" type="submit">Enviar</button>
+</form>
 
-        <h1 align="center">OSSAnalyzer</h1>
-        <form action="/userrepo" method="POST">
-            <label for="username">Nombre de Usuario:</label><br>
-            <input type="text" id="username" name="username" required><br><br>
-            
-            <label for="repo">Nombre del Repositorio:</label><br>
-            <input type="text" id="repo" name="repo" required><br><br>
-            
-            <input type="submit" value="Enviar" id="btn">
-        </form>
 
-    </body>
-</html>
+{% endblock %}

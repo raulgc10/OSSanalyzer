@@ -1472,3 +1472,9 @@ AssertionError: applications must write bytes
 2024-03-10 10:49:37,652 - 127.0.0.1 - - [10/Mar/2024 10:49:37] "[36mGET /static/formulario.js HTTP/1.1[0m" 304 -
 2024-03-10 10:49:37,652 - 127.0.0.1 - - [10/Mar/2024 10:49:37] "[36mGET /static/formulario.css HTTP/1.1[0m" 304 -
 2024-03-10 10:49:40,155 - 127.0.0.1 - - [10/Mar/2024 10:49:40] "[33mGET /info HTTP/1.1[0m" 404 -
+2024-03-10 10:52:51,714 - 127.0.0.1 - - [10/Mar/2024 10:52:51] "GET / HTTP/1.1" 200 -
+2024-03-10 10:52:51,732 - 127.0.0.1 - - [10/Mar/2024 10:52:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-03-10 10:52:53,135 -  * Detected change in 'c:\\Universidad\\TFG\\program\\OSSanalyzer\\web\\endpoints.py', reloading
+2024-03-10 10:52:53,171 -  * Restarting with stat
+2024-03-10 10:52:53,566 -  * Debugger is active!
+2024-03-10 10:52:53,575 -  * Debugger PIN: 143-611-746
