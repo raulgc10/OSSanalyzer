@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request, jsonify
-from utils import obtener_issues_personal, config_load
-import logging
-import json
+from flask import Flask
+from utils import config_load
+import logging                                
 from web import create_app
 
 
