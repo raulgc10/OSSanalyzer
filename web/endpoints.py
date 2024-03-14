@@ -11,7 +11,7 @@ def mainpage():
 @endpoint.route('/userrepo', methods=['GET','POST']) 
 def userrepo():
     if request.method == 'GET':
-            return render_template("formulario.html")
+            return render_template("userrepoForm.html")
     elif request.method == 'POST':
             username = request.form['username']
             reponame = request.form['repo']
@@ -20,3 +20,6 @@ def userrepo():
     else:
         return "Error al procesar la petición"
 
+@endpoint.route('/info', methods=['GET'])
+def info():
+      return render_template("info.html")
