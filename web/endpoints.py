@@ -3,11 +3,12 @@ from utils import obtener_issues_personal
 
 endpoint = Blueprint("endpoint", __name__)
 
-# Define la ruta principal en la que se darán diferentes opciones al usuario para obtener los datos de los repositorios de github
+# Define la ruta principal en la que se darán diferentes opciones al usuario 
 @endpoint.route('/', methods=['GET'])
 def mainpage():
     return render_template("mainpage.html")
 
+# Ruta de ejemplo para probar
 @endpoint.route('/userrepo', methods=['GET','POST']) 
 def userrepo():
     if request.method == 'GET':
@@ -20,6 +21,7 @@ def userrepo():
     else:
         return "Error al procesar la petición"
 
+# Define la ruta para que el usuario vea algo de información sobre la página web y el proyecto 
 @endpoint.route('/info', methods=['GET'])
 def info():
       return render_template("info.html")

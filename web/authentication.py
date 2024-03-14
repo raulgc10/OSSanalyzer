@@ -3,7 +3,7 @@ import logging
 
 auth = Blueprint("authentication", __name__)
 
-
+# Define la ruta para que los usuarios inicien sesión
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
       if request.method == 'GET':
@@ -13,6 +13,7 @@ def login():
             password = request.form['password']
             return render_template("loginResult.html", username=username)
 
+# Define la ruta para que los usuarios se registren
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
       if request.method == 'GET':

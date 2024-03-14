@@ -1,6 +1,7 @@
 from perceval.backends.core.github import GitHub
 import json
 
+# Función para obtener los datos de los repositorios
 def obtener_issues_personal(repo_owner, repo_name):
     # Crea una instancia del backend de GitHub
     github_repo = GitHub(owner=repo_owner, repository=repo_name)
