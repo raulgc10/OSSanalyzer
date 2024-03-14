@@ -1,5 +1,6 @@
 from flask import Flask
 
+# Función para crear la app y registrar los endpoints disponibles
 def create_app():
     app = Flask (__name__)
 
