@@ -8,18 +8,10 @@ endpoint = Blueprint("endpoint", __name__)
 def mainpage():
     return render_template("mainpage.html")
 
-@endpoint.route('/mainpage.js', methods=['GET'])
-def mainpage_js():
-    return render_template("mainpage.js")
-
-@endpoint.route('/mainpage.css', methods=['GET'])
-def mainpage_css():
-    return render_template("mainpage.css")
-
 @endpoint.route('/userrepo', methods=['GET','POST']) 
 def userrepo():
     if request.method == 'GET':
-            return render_template("formulario.html")
+            return render_template("userrepoForm.html")
     elif request.method == 'POST':
             username = request.form['username']
             reponame = request.form['repo']
@@ -28,3 +20,6 @@ def userrepo():
     else:
         return "Error al procesar la petición"
 
+@endpoint.route('/info', methods=['GET'])
+def info():
+      return render_template("info.html")

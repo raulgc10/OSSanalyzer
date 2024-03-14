@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block title %}Userrepo{% endblock %}
+{% block content %}
+</br>
+<form action="/userrepo" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario de Github">
+        <label for="username">Nombre de usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="repo" name="repo" placeholder="Nombre del repositorio">
+        <label for="repo">Nombre del repositorio</label>
+      </div>
+    </br>
+    <button class="btn btn-dark" type="submit">Enviar</button>
+</form>
+
+
+{% endblock %}

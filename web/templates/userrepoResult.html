@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>OSSAnalyzer</title>
-    </head>
-    <body>
-
-        <h1 align="center">Repositorio de {{info.owner}} - {{info.repo}}</h1>
-
-        <h2 align="center">URL - {{ info.origin }}</h2>
-
-    </body>
-</html>
+{% extends "base.html" %} 
+{% block title %}{{ info.search_fields.owner }} - {{ info.search_fields.repo }}{% endblock %}
+{% block content %}
+    <p align="left">URL del repositorio - {{ info.origin }}</p>
+    <p align="left">URL del usuario - {{ info.data.user.html_url }}</p>
+{% endblock %}
