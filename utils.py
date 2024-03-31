@@ -1,29 +1,18 @@
 from perceval.backends.core.git import Git
 import json
 
-# Función para obtener los datos de los repositorios
-def obtener_issues_personal(repo_owner, repo_name):
-    # Crea una instancia del backend de GitHub
-    github_repo = GitHub(owner=repo_owner, repository=repo_name)
-    repository_fetch = github_repo.fetch()
-    for data in repository_fetch:
-        return data
-
 # Función para cargar la configuración del programa que viene de un fichero de configuración en formato JSON
 def config_load(config_file):
     with open(config_file, "r") as file:
         configs = json.load(file)
     return configs
 
-# url for the git repo to analyze
-repo_url = 'http://github.com/grimoirelab/perceval.git'
-# directory for letting Perceval clone the git repo
-repo_dir = '/tmp/perceval.git'
-
+# Función para obtener los datos de un repositorio Git
 def obtain_repo_data(repo_url,repo_dir):
     repo_data = Git(uri=repo_url, gitpath=repo_dir)
     return repo_data
 
+# Función para obtener una lista con los usuarios que han trabajado en el repositorio
 def obtain_users(repo):
     users=[]
     for commit in repo.fetch():
@@ -33,7 +22,7 @@ def obtain_users(repo):
             pass
     return users
 
-
+# Función para obtener una lista con los emails de los usuarios que han trabajado en el repositorio
 def obtain_emails(repo):
     emails=[]
     for commit in repo.fetch():
@@ -43,22 +32,25 @@ def obtain_emails(repo):
             pass
     return emails
 
+# Función para obtener un diccionario de listas con los archivos en los que ha trabajado cada usuario que ha participado en el proyecto
 def obtain_users_files(repo,users):
     changes = {}
     for user in users:
         changes[user] = []
     for commit in repo.fetch():  
             for user in users:  
-                if (commit["data"]["Author"].split("<")[0] == user):
-                    if commit["data"]["files"][0]["file"] not in changes[user]:
-                        changes[user].append(commit["data"]["files"][0]["file"])
+                for file in commit["data"]["files"]:
+                    if (commit["data"]["Author"].split("<")[0] == user):
+                        if file["file"] not in changes[user]:
+                            changes[user].append(file["file"])
+                        else:
+                            pass
                     else:
                         pass
-                else:
-                    pass
-    print (changes)
+    return changes
 
-repo = obtain_repo_data("http://github.com/grimoirelab/perceval.git", "/tmp/perceval.git")
+# TODO def obtain_files_extension(changes):
+
+repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
 users = obtain_users(repo)
 obtain_users_files(repo, users)
-
