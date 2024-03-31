@@ -1,5 +1,6 @@
 from perceval.backends.core.git import Git
 import json
+import os
 
 # Función para cargar la configuración del programa que viene de un fichero de configuración en formato JSON
 def config_load(config_file):
@@ -49,8 +50,21 @@ def obtain_users_files(repo,users):
                         pass
     return changes
 
-# TODO def obtain_files_extension(changes):
+# Función para obtener las extensiones de los archivos que ha modificado cada usuario
+def obtain_files_extension(changes):
+
+    with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
+        data = json.load(file)
+        extensiones = data.get("extensiones", {})
+    
+    for value in changes.values():
+        for i in range(len(value)):
+            for key, new_value in extensiones.items():
+                if key in value[i]:
+                    value[i] = new_value
+    print(changes)
 
 repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
 users = obtain_users(repo)
-obtain_users_files(repo, users)
+changes = obtain_users_files(repo, users)
+obtain_files_extension(changes)

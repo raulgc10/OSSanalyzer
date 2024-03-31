@@ -7,5 +7,15 @@
     "filename": "logs/OSSAnalyzer.log",
     "level": 10,
     "format": "%(asctime)s - %(message)s"
+  },
+  "extensiones": {
+    ".py": "py",
+    ".xml": "xml",
+    ".txt": "txt",
+    ".json": "json",
+    ".csv": "csv",
+    ".md": "md",
+    ".yml": "yml",
+    ".html": "html"
   }
 }
