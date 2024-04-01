@@ -32,7 +32,10 @@
     ".font": "Font",
     ".pdf": "PDF",
     ".log": "LogFile",
-    ".tar.gz": "Compressed File"
+    ".tar.gz": "Compressed File",
+    ".toml": "TOML",
+    ".lock": "LOCK",
+    ".bat": "BATCH"
 
   }
 }
