@@ -9,13 +9,30 @@
     "format": "%(asctime)s - %(message)s"
   },
   "extensiones": {
-    ".py": "py",
-    ".xml": "xml",
-    ".txt": "txt",
-    ".json": "json",
-    ".csv": "csv",
-    ".md": "md",
-    ".yml": "yml",
-    ".html": "html"
+    ".py": "Python",
+    ".xml": "XML",
+    ".txt": "Text",
+    ".json": "JSON",
+    ".csv": "CSV",
+    ".md": "Markdown",
+    ".yml": "YAML",
+    ".html": "HTML",
+    ".js": "JavaScript",
+    ".css": "Style",
+    ".c": "C",
+    ".cpp": "C++",
+    ".sh": "Shell",
+    ".pl": "Perl",
+    ".cgi": "CGI",
+    ".php": "PHP",
+    ".java": "Java",
+    ".ada": "ADA",
+    ".s": "Assembly",
+    ".asm": "Assembly",
+    ".font": "Font",
+    ".pdf": "PDF",
+    ".log": "LogFile",
+    ".tar.gz": "Compressed File"
+
   }
 }
