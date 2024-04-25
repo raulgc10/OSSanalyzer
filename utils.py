@@ -1,4 +1,5 @@
 from perceval.backends.core.git import Git
+from collections import Counter
 import json
 import os
 
@@ -35,36 +36,67 @@ def obtain_emails(repo):
 
 # Función para obtener un diccionario de listas con los archivos en los que ha trabajado cada usuario que ha participado en el proyecto
 def obtain_users_files(repo,users):
-    changes = {}
+    file_dict = {}
     for user in users:
-        changes[user] = []
+        file_dict[user] = []
     for commit in repo.fetch():  
             for user in users:  
                 for file in commit["data"]["files"]:
                     if (commit["data"]["Author"].split("<")[0] == user):
-                        if file["file"] not in changes[user]:
-                            changes[user].append(file["file"])
+                        if file["file"] not in file_dict[user]:
+                            file_dict[user].append(file["file"])
                         else:
                             pass
                     else:
                         pass
-    return changes
+    return file_dict
 
 # Función para obtener las extensiones de los archivos que ha modificado cada usuario
-def obtain_files_extension(changes):
+def obtain_files_extension(ext_dict):
 
     with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
         data = json.load(file)
         extensiones = data.get("extensiones", {})
     
-    for value in changes.values():
+    for value in ext_dict.values():
         for i in range(len(value)):
             for key, new_value in extensiones.items():
                 if key in value[i]:
                     value[i] = new_value
-    print(changes)
+    return ext_dict
 
-repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
+def counter_ext(dict_counter):
+
+    with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
+        data = json.load(file)
+        extensiones = data.get("extensiones", {})
+    extensiones_invertido = {valor: clave for clave, valor in extensiones.items()}
+    # Creamos un nuevo diccionario para almacenar los contadores por cada clave
+    contadores_por_key = {}
+
+    # Iteramos sobre las claves y valores del diccionario
+    for key, lista in dict_counter.items():
+        # Creamos un diccionario vacío para contar las ocurrencias de cada extensión
+        contador_extensiones = {}
+        # Iteramos sobre los elementos de la lista
+        for elemento in lista:
+            # Verificamos si el valor del elemento coincide con alguna clave en el diccionario invertido
+            if elemento in extensiones_invertido:
+                # Obtenemos la extensión correspondiente al valor del elemento
+                extension = extensiones_invertido[elemento]
+                # Si la extensión ya está en el contador, incrementamos su conteo, de lo contrario, lo inicializamos en 1
+                if extension in contador_extensiones:
+                    contador_extensiones[extension] += 1
+                else:
+                    contador_extensiones[extension] = 1
+        # Almacenamos el contador de extensiones en el nuevo diccionario
+        contadores_por_key[key] = contador_extensiones
+        
+    print (contadores_por_key)
+            
+repo = obtain_repo_data("https://github.com/TypesettingTools/Aegisub-Motion.git", "/tmp/aegisub-motion.git")
 users = obtain_users(repo)
 changes = obtain_users_files(repo, users)
-obtain_files_extension(changes)
+
+ext = obtain_files_extension(changes)
+counter_ext(ext)

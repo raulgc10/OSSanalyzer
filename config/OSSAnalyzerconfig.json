@@ -15,7 +15,7 @@
     ".json": "JSON",
     ".csv": "CSV",
     ".md": "Markdown",
-    ".yml": "YAML",
+    ".yml": "YAML | Docker Compose",
     ".html": "HTML",
     ".js": "JavaScript",
     ".css": "Style",
@@ -35,7 +35,10 @@
     ".tar.gz": "Compressed File",
     ".toml": "TOML",
     ".lock": "LOCK",
-    ".bat": "BATCH"
-
+    ".bat": "BATCH",
+    ".pyc": "Python Cache",
+    ".moon": "MOON",
+    ".lua": "LUA",
+    ".ass": "AlphaSubstation"
   }
 }
