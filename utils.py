@@ -70,29 +70,42 @@ def counter_ext(dict_counter):
     with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
         data = json.load(file)
         extensiones = data.get("extensiones", {})
-    extensiones_invertido = {valor: clave for clave, valor in extensiones.items()}
+    inverted_extensions = {value: key for key, value in extensiones.items()}
     # Creamos un nuevo diccionario para almacenar los contadores por cada clave
-    contadores_por_key = {}
+    keys_counter = {}
 
     # Iteramos sobre las claves y valores del diccionario
     for key, lista in dict_counter.items():
         # Creamos un diccionario vacío para contar las ocurrencias de cada extensión
-        contador_extensiones = {}
+        ext_counter = {}
         # Iteramos sobre los elementos de la lista
         for elemento in lista:
             # Verificamos si el valor del elemento coincide con alguna clave en el diccionario invertido
-            if elemento in extensiones_invertido:
+            if elemento in inverted_extensions:
                 # Obtenemos la extensión correspondiente al valor del elemento
-                extension = extensiones_invertido[elemento]
+                extension = inverted_extensions[elemento]
                 # Si la extensión ya está en el contador, incrementamos su conteo, de lo contrario, lo inicializamos en 1
-                if extension in contador_extensiones:
-                    contador_extensiones[extension] += 1
+                if extension in ext_counter:
+                    ext_counter[extension] += 1
                 else:
-                    contador_extensiones[extension] = 1
+                    ext_counter[extension] = 1
         # Almacenamos el contador de extensiones en el nuevo diccionario
-        contadores_por_key[key] = contador_extensiones
-        
-    print (contadores_por_key)
+        keys_counter[key] = ext_counter
+    
+    # Crear un nuevo diccionario para almacenar las actualizaciones
+    new_dict = {}
+    # Actualizar los valores del diccionario 'archivos' con los valores del diccionario 'extensiones'
+    for user, extension in keys_counter.items():
+        new_dict[user] = {}
+        for ext, number in extension.items():
+            if ext in extensiones:
+                new_dict[user][extensiones[ext]] = number
+
+    # Actualizar el diccionario 'archivos' con los valores actualizados
+    keys_counter.clear()
+    keys_counter.update(new_dict)
+    
+    return keys_counter
             
 repo = obtain_repo_data("https://github.com/TypesettingTools/Aegisub-Motion.git", "/tmp/aegisub-motion.git")
 users = obtain_users(repo)
