@@ -4,10 +4,13 @@ import json
 import os
 
 # Función para cargar la configuración del programa que viene de un fichero de configuración en formato JSON
-def config_load(config_file):
-    with open(config_file, "r") as file:
-        configs = json.load(file)
-    return configs
+def config_load():
+    global data
+    global extensiones
+    with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
+        data = json.load(file)
+        extensiones = data.get("extensiones", {})
+    return data, extensiones
 
 # Función para obtener los datos de un repositorio Git
 def obtain_repo_data(repo_url,repo_dir):
@@ -54,9 +57,7 @@ def obtain_users_files(repo,users):
 # Función para obtener las extensiones de los archivos que ha modificado cada usuario
 def obtain_files_extension(ext_dict):
 
-    with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
-        data = json.load(file)
-        extensiones = data.get("extensiones", {})
+    
     
     for value in ext_dict.values():
         for i in range(len(value)):
@@ -67,9 +68,6 @@ def obtain_files_extension(ext_dict):
 
 def counter_ext(dict_counter):
 
-    with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
-        data = json.load(file)
-        extensiones = data.get("extensiones", {})
     inverted_extensions = {value: key for key, value in extensiones.items()}
     # Creamos un nuevo diccionario para almacenar los contadores por cada clave
     keys_counter = {}
@@ -106,10 +104,12 @@ def counter_ext(dict_counter):
     keys_counter.update(new_dict)
     
     return keys_counter
-            
-repo = obtain_repo_data("https://github.com/TypesettingTools/Aegisub-Motion.git", "/tmp/aegisub-motion.git")
+
+
+config_load()
+repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
 users = obtain_users(repo)
 changes = obtain_users_files(repo, users)
 
 ext = obtain_files_extension(changes)
-counter_ext(ext)
+dict_number = counter_ext(ext)
