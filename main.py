@@ -7,13 +7,18 @@ from web import create_app
 # Crea una instancia de la aplicación Flask
 app = create_app()
 
+
+# Obtenemos el fichero de configuración
+config = config_load()[0]
+
 # Función para obtener el puerto
-def ip_port_load():
+def port_load():
     app_port = config["mainconfig"]["port"]
+    return app_port
+
+def ip_load():
     app_ip = config["mainconfig"]["ip"]
-    return app_port, app_ip
-
-
+    return app_ip
 # Función para obtener configuración de los logs
 def log_load():
     log_level = config["log"]["level"]
@@ -22,13 +27,9 @@ def log_load():
 
     return log_level, log_filename, log_format
 
-
-# Obtenemos el fichero de configuración
-config = config_load("config/OSSAnalyzerconfig.json")
-
 # Cargamos el puerto y la config de logs
-port = ip_port_load()[0]
-ip = ip_port_load()[1]
+port = port_load()
+ip = ip_load()
 logs = log_load()
 
 # Crea logs del programa

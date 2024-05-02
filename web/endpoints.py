@@ -1,5 +1,5 @@
 from flask import Blueprint,render_template, request
-from utils import obtener_issues_personal
+from utils import obtain_repo_data, obtain_users, obtain_files_extension, obtain_emails, obtain_users_files, counter_ext, define_expertise
 
 endpoint = Blueprint("endpoint", __name__)
 
@@ -16,7 +16,7 @@ def userrepo():
     elif request.method == 'POST':
             username = request.form['username']
             reponame = request.form['repo']
-            repository_data = obtener_issues_personal(username, reponame)
+            repository_data = obtain_repo_data(f"https://github.com/{username}/{reponame}.git", f"/tmp/{reponame}.git")
             return render_template("userrepoResult.html",info=repository_data)
     else:
         return "Error al procesar la petición"

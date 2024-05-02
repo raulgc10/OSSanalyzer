@@ -56,9 +56,6 @@ def obtain_users_files(repo,users):
 
 # Función para obtener las extensiones de los archivos que ha modificado cada usuario
 def obtain_files_extension(ext_dict):
-
-    
-    
     for value in ext_dict.values():
         for i in range(len(value)):
             for key, new_value in extensiones.items():
@@ -105,11 +102,28 @@ def counter_ext(dict_counter):
     
     return keys_counter
 
+def define_expertise(num_counter):
+    final_dict={}
+    for user, ext_number in num_counter.items():
+        new_dict={}
+        # Verificar si el diccionario de datos no está vacío
+        if ext_number:
+            # Obtener el tipo de archivo con el mayor conteo y su conteo
+            archivo_max = max(ext_number, key=ext_number.get)
+            conteo_max = ext_number[archivo_max]
+            new_dict[archivo_max] = conteo_max
+            final_dict[user]=new_dict
+        else:
+            final_dict[user]={}
+    return final_dict
+        
 
-config_load()
-repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
-users = obtain_users(repo)
-changes = obtain_users_files(repo, users)
+# config_load()
+# repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
+# users = obtain_users(repo)
+# changes = obtain_users_files(repo, users)
 
-ext = obtain_files_extension(changes)
-dict_number = counter_ext(ext)
+# ext = obtain_files_extension(changes)
+# nume = counter_ext(ext)
+# define_expertise(nume)
+
