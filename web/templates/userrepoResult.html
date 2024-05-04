@@ -1,5 +1,16 @@
 {% extends "base.html" %} 
-{% block title %}{{ info.search_fields.owner }} - {{ info.search_fields.repo }}{% endblock %}
+{% block title %}result{% endblock %}
 {% block content %}
-    <p align="left">correcto</p>
+    <h1>Listado de Personas</h1>
+    <ul>
+        {% for nombre, detalles in personas.items() %}
+            <li>{{ nombre }}: 
+                <ul>
+                    {% for key, value in detalles.items() %}
+                        <li>{{ key }}: {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

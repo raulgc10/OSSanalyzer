@@ -63,45 +63,36 @@ def obtain_files_extension(ext_dict):
                     value[i] = new_value
     return ext_dict
 
+# Función para hacer el conteo de las extensiones de cada usuario
 def counter_ext(dict_counter):
 
     inverted_extensions = {value: key for key, value in extensiones.items()}
-    # Creamos un nuevo diccionario para almacenar los contadores por cada clave
     keys_counter = {}
 
-    # Iteramos sobre las claves y valores del diccionario
     for key, lista in dict_counter.items():
-        # Creamos un diccionario vacío para contar las ocurrencias de cada extensión
         ext_counter = {}
-        # Iteramos sobre los elementos de la lista
         for elemento in lista:
-            # Verificamos si el valor del elemento coincide con alguna clave en el diccionario invertido
             if elemento in inverted_extensions:
-                # Obtenemos la extensión correspondiente al valor del elemento
                 extension = inverted_extensions[elemento]
-                # Si la extensión ya está en el contador, incrementamos su conteo, de lo contrario, lo inicializamos en 1
                 if extension in ext_counter:
                     ext_counter[extension] += 1
                 else:
                     ext_counter[extension] = 1
-        # Almacenamos el contador de extensiones en el nuevo diccionario
         keys_counter[key] = ext_counter
     
-    # Crear un nuevo diccionario para almacenar las actualizaciones
     new_dict = {}
-    # Actualizar los valores del diccionario 'archivos' con los valores del diccionario 'extensiones'
     for user, extension in keys_counter.items():
         new_dict[user] = {}
         for ext, number in extension.items():
             if ext in extensiones:
                 new_dict[user][extensiones[ext]] = number
 
-    # Actualizar el diccionario 'archivos' con los valores actualizados
     keys_counter.clear()
     keys_counter.update(new_dict)
     
     return keys_counter
 
+# Función para definir la extensión en la que más ha trabajado cada usuario
 def define_expertise(num_counter):
     final_dict={}
     for user, ext_number in num_counter.items():
@@ -116,14 +107,20 @@ def define_expertise(num_counter):
         else:
             final_dict[user]={}
     return final_dict
-        
 
-# config_load()
-# repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
-# users = obtain_users(repo)
-# changes = obtain_users_files(repo, users)
+# Función para dar formato al json con el que se forma la página        
+def dict_to_json(dictionary):
+    new_json = {"data": dictionary}
+    final_json = json.dumps(new_json, ensure_ascii=False)
+    return final_json
+    
 
-# ext = obtain_files_extension(changes)
-# nume = counter_ext(ext)
-# define_expertise(nume)
+config_load()
+repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
+users = obtain_users(repo)
+changes = obtain_users_files(repo, users)
 
+ext = obtain_files_extension(changes)
+nume = counter_ext(ext)
+aa = define_expertise(nume)
+print (dict_to_json(aa))
