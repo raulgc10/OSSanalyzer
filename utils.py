@@ -92,6 +92,18 @@ def counter_ext(dict_counter):
     
     return keys_counter
 
+def obtain_all_files(dictionary):
+    # Crear un nuevo diccionario para almacenar los valores únicos
+    unique_data = {}
+
+    # Iterar sobre las claves del diccionario original
+    for key, value in dictionary.items():
+        # Eliminar duplicados y convertir la lista a un conjunto
+        unique_files = list(set(value))
+        # Actualizar el nuevo diccionario
+        unique_data[key] = unique_files
+
+    print(unique_data)
 # Función para definir la extensión en la que más ha trabajado cada usuario
 def define_expertise(num_counter):
     final_dict={}
@@ -113,14 +125,3 @@ def dict_to_json(dictionary):
     new_json = {"data": dictionary}
     final_json = json.dumps(new_json, ensure_ascii=False)
     return final_json
-    
-
-config_load()
-repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
-users = obtain_users(repo)
-changes = obtain_users_files(repo, users)
-
-ext = obtain_files_extension(changes)
-nume = counter_ext(ext)
-aa = define_expertise(nume)
-print (dict_to_json(aa))
