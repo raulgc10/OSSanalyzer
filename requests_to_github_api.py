@@ -1,5 +1,6 @@
 import requests
 
+# Función para obtener el porcentaje de lenguajes usados en el repositorio
 def obtain_language_percentages(username, reponame):
     url = f"https://api.github.com/repos/{username}/{reponame}/languages"
     response = requests.get(url)
@@ -10,11 +11,11 @@ def obtain_language_percentages(username, reponame):
         porcentajes_truncados = {lenguaje: round(porcentaje, 2) for lenguaje, porcentaje in porcentajes.items()}
         return porcentajes_truncados
     else:
-        print(f"No se pudo obtener la información. Código de estado: {response.status_code}")
-        return None
+        return response.status_code
 
-def obtener_numero_archivos(owner, repo):
-    url = f"https://api.github.com/repos/{owner}/{repo}/contents"
+# Función para obtener el número de archivos totales de un repositorio 
+def obtain_num_files(username, reponame):
+    url = f"https://api.github.com/repos/{username}/{reponame}/contents"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
@@ -30,10 +31,56 @@ def obtener_numero_archivos(owner, repo):
                     for file_dir in data_dir["tree"]:
                         if file_dir["type"] == "blob":
                             counter_files +=1
+                else:
+                    return response_dir.status_code
         return counter_files
     else:
-        print(f"No se pudo obtener la información. Código de estado: {response.status_code}")
-        return None
+        return response.status_code
 
-    
-print(obtener_numero_archivos("raulgc10","OSSAnalyzer"))
+# Función para obtener los contribuyentes de un repositorio
+def obtain_repository_contributors(username, reponame):
+    contributors=[]
+    url = f"https://api.github.com/repos/{username}/{reponame}/contributors"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        for contributor in data:
+            contributors.append(contributor["login"])
+        # La API de github proporciona únicamente 30 por defecto
+        while 'next' in response.links.keys():
+            next_url = response.links["next"]["url"]
+            response = requests.get(next_url)
+            if response.status_code == 200:
+                data = response.json()
+                for contributor in data:
+                    contributors.append(contributor["login"])
+            else:
+                return response.status_code
+        
+        return contributors
+    else:
+        return response.status_code
+
+# Función para obtener los contribuyentes de un repositorio
+def obtain_repository_contributors_avatars(username, reponame):
+    avatar_dict={}
+    url = f"https://api.github.com/repos/{username}/{reponame}/contributors"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        for contributor in data:
+            avatar_dict[contributor["login"]] = contributor["avatar_url"]
+        # La API de github proporciona únicamente 30 por defecto
+        while 'next' in response.links.keys():
+            next_url = response.links["next"]["url"]
+            response = requests.get(next_url)
+            if response.status_code == 200:
+                data = response.json()
+                for contributor in data:
+                    avatar_dict[contributor["login"]] = contributor["avatar_url"]
+            else:
+                return response.status_code
+        
+        return avatar_dict
+    else:
+        return response.status_code
