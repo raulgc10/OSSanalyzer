@@ -2,6 +2,14 @@
 {% block title %}result{% endblock %}
 {% block content %}
     <h1>{{ NombreRepo }} - {{ NombreUser }}</h1>
+    <h2>Este repositorio tiene un total de {{ totalFiles }} archivos</h2>
+    <h3>De los cuales el porcentaje de cada lenguaje usado es:</h3>
+    <ul>
+        {% for language, number in langPercentages.items() %}
+            <li>{{ language }} : {{ number }}</li>
+        {% endfor %}
+    </ul>
+    <h4> Aportaciones de cada usuario en commits: </h4>
     <ul>
         {% for nombre, detalles in personas.items() %}
             <li>{{ nombre }}: 

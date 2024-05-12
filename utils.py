@@ -56,24 +56,22 @@ def obtain_users_files(repo,users):
 
 # Función para obtener las extensiones de los archivos que ha modificado cada usuario
 def obtain_files_extension(ext_dict):
-    for value in ext_dict.values():
+    for key, value in ext_dict.items():
         for i in range(len(value)):
-            for key, new_value in extensiones.items():
-                if key in value[i]:
-                    value[i] = new_value
+            for ext, lang in extensiones.items():
+                if value[i].endswith(ext):
+                    value[i] = lang
     return ext_dict
 
 # Función para hacer el conteo de las extensiones de cada usuario
 def counter_ext(dict_counter):
-
-    inverted_extensions = {value: key for key, value in extensiones.items()}
     keys_counter = {}
 
     for key, lista in dict_counter.items():
         ext_counter = {}
         for elemento in lista:
-            if elemento in inverted_extensions:
-                extension = inverted_extensions[elemento]
+            if elemento in extensiones.values():
+                extension = elemento
                 if extension in ext_counter:
                     ext_counter[extension] += 1
                 else:
@@ -86,9 +84,7 @@ def counter_ext(dict_counter):
         for ext, number in extension.items():
             if ext in extensiones:
                 new_dict[user][extensiones[ext]] = number
-
-    keys_counter.clear()
-    keys_counter.update(new_dict)
+    
     
     return keys_counter
 
@@ -125,3 +121,10 @@ def dict_to_json(dictionary):
     new_json = {"data": dictionary}
     final_json = json.dumps(new_json, ensure_ascii=False)
     return final_json
+
+config_load()
+repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
+users = obtain_users(repo)
+changes = obtain_users_files(repo, users)
+ext = obtain_files_extension(changes)
+print(counter_ext(ext))
