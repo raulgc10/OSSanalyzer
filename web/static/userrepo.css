@@ -1,0 +1,13 @@
+#izq {
+    float: left;
+    width: 60%;
+    text-align: justify;
+}
+#izq {
+    float: right;
+    width: 40%;
+    text-align: justify;
+}
+#izq h1 {
+    text-align: center;
+}

@@ -122,9 +122,3 @@ def dict_to_json(dictionary):
     final_json = json.dumps(new_json, ensure_ascii=False)
     return final_json
 
-config_load()
-repo = obtain_repo_data("https://github.com/chaoss/grimoirelab-perceval.git", "/tmp/perceval.git")
-users = obtain_users(repo)
-changes = obtain_users_files(repo, users)
-ext = obtain_files_extension(changes)
-print(counter_ext(ext))

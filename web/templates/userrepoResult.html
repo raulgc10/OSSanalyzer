@@ -1,24 +1,29 @@
 {% extends "base.html" %} 
 {% block title %}result{% endblock %}
 {% block content %}
-    <h1>{{ NombreRepo }} - {{ NombreUser }}</h1>
-    <h2>Este repositorio tiene un total de {{ totalFiles }} archivos</h2>
-    <h3>De los cuales el porcentaje de cada lenguaje usado es:</h3>
-    <ul>
-        {% for language, number in langPercentages.items() %}
-            <li>{{ language }} : {{ number }}</li>
-        {% endfor %}
-    </ul>
-    <h4> Aportaciones de cada usuario en commits: </h4>
-    <ul>
-        {% for nombre, detalles in personas.items() %}
-            <li>{{ nombre }}: 
-                <ul>
-                    {% for key, value in detalles.items() %}
-                        <li>{{ key }}: {{ value }}</li>
-                    {% endfor %}
-                </ul>
-            </li>
-        {% endfor %}
-    </ul>
+    <div id="izq" >
+        <h1>{{ NombreRepo }} - {{ NombreUser }}</h1>
+        <h2>Este repositorio tiene un total de {{ totalFiles }} archivos</h2>
+        <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" height="400px" width="550px">
+        <h1> Análisis del repositorio </h1>
+    </div>
+    <div id="der">
+        <h4> Aportaciones de cada usuario en commits: </h4>
+        <ul>
+            {% for nombre, detalles in personas.items() %}
+                <li>
+                    <a href="#" class="user-link">{{ nombre }}</a>
+                    <div class="commits-list" style="display: none;">
+                        <ul>
+                            {% for key, value in detalles.items() %}
+                                <li>{{ key }}: {{ value }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <link rel="stylesheet" href="static/userrepo.css">
+    <script src="static/userrepo.js"></script>
 {% endblock %}
