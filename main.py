@@ -3,7 +3,6 @@ from utils import config_load
 import logging                                
 from web import create_app
 
-
 # Crea una instancia de la aplicación Flask
 app = create_app()
 

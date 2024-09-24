@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<h2>Inicio de sesión</h2>
+<p> El usuario o la contraseña es incorrecta, introduce de nuevo tu nombre de usuario y contraseña</p>
+</br>
+<form action="/login" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuari">
+        <label for="username">Nombre de usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña">
+        <label for="password">Contraseña</label>
+      </div>
+    </br>
+    <button class="btn btn-dark" type="submit">Iniciar sesión</button>
+</form>
+{% endblock %}

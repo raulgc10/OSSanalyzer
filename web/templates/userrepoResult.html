@@ -2,10 +2,20 @@
 {% block title %}result{% endblock %}
 {% block content %}
     <div id="izq" >
-        <h1>{{ NombreRepo }} - {{ NombreUser }}</h1>
-        <h2>Este repositorio tiene un total de {{ totalFiles }} archivos</h2>
-        <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" height="400px" width="550px">
-        <h1> Análisis del repositorio </h1>
+        <h1>Análisis del repositorio</h2>
+        <h2>{{ NombreRepo }} - {{ NombreUser }}</h2>
+        <h3>Este repositorio tiene un total de {{ totalFiles }} archivos</h3>
+        <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" height="400px" width="550px"><ul>{% for nombre, porcentaje in langPercentages.items() %}<li> {{ nombre }}: {{ porcentaje }}</li>{% endfor %}</ul>
+        <h4>En este repositorio hay ficheros de {{ langPercentages|length }} lenguajes:</h4>
+        <p> El lenguaje mayoritario es {{ langPercentages.keys()|first() }} </p>
+        <p> Los lenguajes minoritarios son: </p>
+        {% for nombre, porcentaje in langPercentages.items() %}
+            {% if porcentaje < 10 %}
+                <p>{{ nombre }}</p>
+            {% endif %}
+        {% endfor %}
+        
+        
     </div>
     <div id="der">
         <h4> Aportaciones de cada usuario en commits: </h4>

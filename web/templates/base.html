@@ -29,8 +29,15 @@
                       Cuenta
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
-                      <li><a class="dropdown-item" href="/register">Registarme</a></li>
+                        {% if user %}
+                            <!-- Si el usuario ha iniciado sesión, mostramos su cuenta -->
+                            <li><a class="dropdown-item" href="/perfil">{{ user }}</a></li>
+                            <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
+                        {% else %}
+                            <!-- Si no ha iniciado sesión, mostramos los enlaces de login y registro -->
+                            <li><a class="dropdown-item" href="/login">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="/register">Registrarme</a></li>
+                        {% endif %}
                     </ul>
                   </li>
                   <li class="nav-item">
