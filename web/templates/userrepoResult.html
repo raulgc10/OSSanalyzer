@@ -5,17 +5,16 @@
         <h1>Análisis del repositorio</h2>
         <h2>{{ NombreRepo }} - {{ NombreUser }}</h2>
         <h3>Este repositorio tiene un total de {{ totalFiles }} archivos</h3>
-        <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" height="400px" width="550px"><ul>{% for nombre, porcentaje in langPercentages.items() %}<li> {{ nombre }}: {{ porcentaje }}</li>{% endfor %}</ul>
-        <h4>En este repositorio hay ficheros de {{ langPercentages|length }} lenguajes:</h4>
-        <p> El lenguaje mayoritario es {{ langPercentages.keys()|first() }} </p>
-        <p> Los lenguajes minoritarios son: </p>
-        {% for nombre, porcentaje in langPercentages.items() %}
-            {% if porcentaje < 10 %}
-                <p>{{ nombre }}</p>
-            {% endif %}
-        {% endfor %}
-        
-        
+        <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" height="400px" width="550px"><ul>{% for nombre, porcentaje in langPercentages.items() %}<li> {{ nombre }}: {{ porcentaje }}</li>{% endfor %}</ul>    
+        </br>
+        <h4>Análisis de los lenguajes minoritarios</h4>
+        <p>Número de commits realizados sobre lenguajes minoritarios:</p>
+        <ul>
+            {% for lenguajemin, num in total_commits_min_languages.items() %}
+            <li>{{ lenguajemin }}: {{num}} </li>
+            {% endfor %}
+        </ul>
+    
     </div>
     <div id="der">
         <h4> Aportaciones de cada usuario en commits: </h4>

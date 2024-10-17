@@ -7,10 +7,12 @@ import os
 def config_load():
     global data
     global extensiones
+    global minlanguages
     with open(os.path.join("config", "OSSAnalyzerconfig.json"), "r") as file:
         data = json.load(file)
         extensiones = data.get("extensiones", {})
-    return data, extensiones
+        minlanguages = data.get("minlanguages", [])
+    return data, extensiones, minlanguages
 
 # Función para obtener los datos de un repositorio Git
 def obtain_repo_data(repo_url,repo_dir):
@@ -121,4 +123,40 @@ def dict_to_json(dictionary):
     new_json = {"data": dictionary}
     final_json = json.dumps(new_json, ensure_ascii=False)
     return final_json
+
+# Función para obtener la cantidad de commits totales realizados sobre ficheros de lenguajes minoritarios 
+def obtain_total_commits_min_languages(dictionary):
+    
+    total_commits_min_languages = {}
+
+    for user, totalcommits in dictionary.items():
+        for lang, num in totalcommits.items():
+            if lang in minlanguages:
+                if lang in total_commits_min_languages:
+                    total_commits_min_languages[lang] += num
+                else:
+                    total_commits_min_languages[lang] = num
+    
+    return total_commits_min_languages
+
+# Función para obtener el top 3 de usuarios por lenguaje minoritario
+def top_contribuyentes_por_lenguaje(contribuciones, lenguajes_minoritarios, top_n=3):
+    top_contribuyentes = {}
+    
+    for lenguaje in lenguajes_minoritarios:
+        # Crear una lista de tuplas (usuario, commits) para el lenguaje actual
+        contribs_lenguaje = [(usuario, lenguajes.get(lenguaje, 0)) for usuario, lenguajes in contribuciones.items() if lenguaje in lenguajes]
+        
+        # Ordenar la lista por número de commits en orden descendente
+        contribs_lenguaje.sort(key=lambda x: x[1], reverse=True)
+        
+        # Guardar el top N usuarios
+        top_contribuyentes[lenguaje] = contribs_lenguaje[:top_n]
+    
+    for lang, top in top_contribuyentes.items():
+        if top == []:
+            top_contribuyentes.pop(lang)
+
+    return top_contribuyentes
+
 

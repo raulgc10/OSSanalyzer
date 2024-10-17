@@ -37,6 +37,19 @@ def obtain_num_files(username, reponame):
     else:
         return response.status_code
 
+# Función para obtener los repositorios de los que un usuario es propietario
+def obtain_user_repos(username):
+    url = f"https://api.github.com/users/{username}/repos"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        dictrepos = {}
+        for repo in data:
+            dictrepos[repo["name"]] = repo["language"]
+        return dictrepos
+    else:
+        return response.status_code
+
 # # Función para obtener los contribuyentes de un repositorio
 # def obtain_repository_contributors(username, reponame):
 #     contributors=[]

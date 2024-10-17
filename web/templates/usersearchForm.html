@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+{% block title %}Usersearch{% endblock %}
+{% block content %}
+</br>
+<form action="/usersearch" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario de Github">
+        <label for="username">Nombre de usuario de GitHub</label>
+      </div>
+    </br>
+    <button class="btn btn-dark" type="submit">Enviar</button>
+</form>
+
+
+{% endblock %}

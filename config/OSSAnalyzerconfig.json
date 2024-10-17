@@ -8,6 +8,14 @@
     "level": 10,
     "format": "%(asctime)s - %(message)s"
   },
+  "minlanguages": [
+    "Makefile",
+    "Dockerfile",
+    "YAML",
+    "TOML",
+    "Markdown",
+    "Shell"
+  ],
   "extensiones": {
     ".bsl": "1C Enterprise",
     ".os": "1C Enterprise",

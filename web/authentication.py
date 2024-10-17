@@ -35,8 +35,9 @@ def register():
             username = request.form['username']
             password = request.form['password']
             email = request.form['email']
+            gitname = request.form['gitname']
             if not db.session.query(User).filter_by(username=username).first():
-                  new_user = User(email=email, username=username, password=generate_password_hash(password, method="sha256"))
+                  new_user = User(email=email, username=username, password=generate_password_hash(password, method="sha256"), gitname=gitname)
                   db.session.add(new_user)
                   db.session.commit()
             else:

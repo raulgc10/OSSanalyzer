@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block title %}Perfil de {{ username }}{% endblock %}
+{% block content %}
+    <div id="der">
+        <h2>Tus repositorios Git</h2>
+        <ul>
+            {% for nombrerepo, lenguajes in dictuserrepos.items() %}
+                <li>
+                    <form action="/userrepo" method="post" style="display:inline;">
+                        <input type="hidden" name="username" value="{{ username }}">
+                        <input type="hidden" name="repo" value="{{ nombrerepo }}">
+                        <button type="submit" class="user-link">{{ nombrerepo }}</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <link rel="stylesheet" href="static/userrepo.css">
+{% endblock %}
