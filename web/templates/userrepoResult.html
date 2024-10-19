@@ -11,10 +11,20 @@
         <p>Número de commits realizados sobre lenguajes minoritarios:</p>
         <ul>
             {% for lenguajemin, num in total_commits_min_languages.items() %}
-            <li>{{ lenguajemin }}: {{num}} </li>
+            <li><strong>{{ lenguajemin }}</strong>: {{num}} </li>
             {% endfor %}
         </ul>
-    
+        <p>Usuarios con mayor número de commits realizados sobre los lenguajes minoritarios:</p>
+        <ul>
+            {% for lang, contributors in topcontributors.items() %}
+                <li><strong>{{ lang }}:</strong></li>
+                <ul>
+                    {% for user, commits in contributors %}
+                        <li>{{ user }}: {{ commits }} commits</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
     </div>
     <div id="der">
         <h4> Aportaciones de cada usuario en commits: </h4>

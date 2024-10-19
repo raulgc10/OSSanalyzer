@@ -8,6 +8,7 @@
     "level": 10,
     "format": "%(asctime)s - %(message)s"
   },
+  "git_token":"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",
   "minlanguages": [
     "Makefile",
     "Dockerfile",

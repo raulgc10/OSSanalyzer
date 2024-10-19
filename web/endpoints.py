@@ -1,6 +1,6 @@
 from flask import Blueprint,render_template, request, session
-from utils import obtain_repo_data, obtain_users, obtain_files_extension, obtain_emails, obtain_users_files, counter_ext, define_expertise, dict_to_json, obtain_total_commits_min_languages, top_contribuyentes_por_lenguaje
-from requests_to_github_api import obtain_language_percentages, obtain_num_files, obtain_user_repos
+from utils import obtain_repo_data, obtain_users, obtain_files_extension, obtain_emails, obtain_users_files, counter_ext, define_expertise, dict_to_json, obtain_total_commits_min_languages, top_contribuyentes_por_lenguaje, obtain_min_languages
+from requests_to_github_api import obtain_language_percentages, obtain_num_files, obtain_user_repos, obtain_used_languages_on_repo
 import json
 import matplotlib.pyplot as plt
 import io
@@ -38,11 +38,11 @@ def userrepo():
             repository_data = dict_to_json(nume)
             data = json.loads(repository_data)
             files_data = data["data"]
-            languages_percentage = obtain_language_percentages(username, reponame)
+            languages_percentage = obtain_used_languages_on_repo(username, reponame)
             total_files = obtain_num_files(username, reponame)
-            
+            minoritary_languages = obtain_min_languages(languages_percentage)
             total_commits_on_min_languages = obtain_total_commits_min_languages(nume)
-            top_contribuyentes_minoritarios = top_contribuyentes_por_lenguaje(nume, utils.minlanguages, top_n=3)
+            top_contribuyentes_minoritarios = top_contribuyentes_por_lenguaje(nume, utils.minlanguages, top_n=50)
 
             #    new_Repo = Repository(owner_name=username, repository_name=reponame, usernames = users, repo_data = data, lg_percent = languages_percentage, num_files = total_files)
             #    db.session.add(new_Repo)
@@ -65,7 +65,7 @@ def userrepo():
             # Convertir la imagen en base64 para incrustarla en HTML
             image_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
             plt.close()  # Cerrar la figura
-            return render_template("userrepoResult.html", user = user, NombreUser = username, image=image_base64, NombreRepo = reponame, personas=files_data, langPercentages = languages_percentage, totalFiles = total_files, total_commits_min_languages = total_commits_on_min_languages)
+            return render_template("userrepoResult.html", user = user, NombreUser = username, image=image_base64, NombreRepo = reponame, personas=files_data, langPercentages = languages_percentage, totalFiles = total_files, total_commits_min_languages = total_commits_on_min_languages, topcontributors = top_contribuyentes_minoritarios)
     else:
         return "Error al procesar la petición"
 
