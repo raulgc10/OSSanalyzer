@@ -37,4 +37,4 @@ logging.basicConfig(level=logs[0], filename=logs[1], format=logs[2])
 # Ejecuta la aplicación
 if __name__ == '__main__':
     print(f"La aplicación se está ejecutando en {ip}:{port}")
-    app.run(debug=False, port=port, host=ip)
+    app.run(debug=True, port=port, host=ip)
