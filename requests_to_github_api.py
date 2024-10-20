@@ -68,8 +68,7 @@ def obtain_user_repos(username):
     else:
         return response.status_code
 
-def obtain_used_languages_on_repo(username, repo):
-    extension_to_language = config_data.get("extensiones", {})
+def obtain_default_branch(username, repo):
     url = f"https://api.github.com/repos/{username}/{repo}"
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
@@ -78,12 +77,24 @@ def obtain_used_languages_on_repo(username, repo):
     else:
         return response.status_code
 
+    return default_branch
+
+def obtain_last_commit(username, repo, default_branch):
     branch_url = f'https://api.github.com/repos/{username}/{repo}/branches/{default_branch}'
     branch_response = requests.get(branch_url, headers=headers)
 
     if branch_response.status_code == 200:
         branch_data = branch_response.json()
         sha = branch_data['commit']['sha']
+    else:
+        return response.status_code
+    return sha
+
+def obtain_used_languages_on_repo(username, repo):
+    extension_to_language = config_data.get("extensiones", {})
+    
+    default_branch = obtain_default_branch(username, repo)
+    sha = obtain_last_commit(username, repo, default_branch) 
 
     tree_url = f'https://api.github.com/repos/{username}/{repo}/git/trees/{sha}?recursive=3000'
     response = requests.get(tree_url, headers=headers)

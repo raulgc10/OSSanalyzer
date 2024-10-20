@@ -146,7 +146,7 @@ def obtain_total_commits_min_languages(dictionary):
     
     return total_commits_min_languages
 
-# Función para obtener el top 3 de usuarios por lenguaje minoritario
+# Función para obtener los commits de cada usuario por lenguaje minoritario
 def top_contribuyentes_por_lenguaje(contribuciones, lenguajes_minoritarios, top_n=3):
 
     top_contribuyentes = {}
@@ -166,5 +166,4 @@ def top_contribuyentes_por_lenguaje(contribuciones, lenguajes_minoritarios, top_
             top_contribuyentes_modificados[lang] = top
 
     return top_contribuyentes_modificados
-
 

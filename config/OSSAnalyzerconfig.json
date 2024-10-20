@@ -5,7 +5,7 @@
   },
   "log": {
     "filename": "logs/OSSAnalyzer.log",
-    "level": 10,
+    "level": 20,
     "format": "%(asctime)s - %(message)s"
   },
   "git_token":"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",

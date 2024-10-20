@@ -1,0 +1,53 @@
+2024-10-20 13:15:59,689 -  * Debugger is active!
+2024-10-20 13:15:59,689 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:00,724 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/main.py', reloading
+2024-10-20 13:16:00,767 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:01,723 -  * Debugger is active!
+2024-10-20 13:16:01,723 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:03,469 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:04,665 -  * Debugger is active!
+2024-10-20 13:16:04,666 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:08,516 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:09,607 -  * Debugger is active!
+2024-10-20 13:16:09,608 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:13,674 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:14,570 -  * Debugger is active!
+2024-10-20 13:16:14,570 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:18,733 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:20,530 -  * Debugger is active!
+2024-10-20 13:16:20,530 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:23,778 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:25,588 -  * Debugger is active!
+2024-10-20 13:16:25,588 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:28,849 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:30,521 -  * Debugger is active!
+2024-10-20 13:16:30,521 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:33,898 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:35,494 -  * Debugger is active!
+2024-10-20 13:16:35,495 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:38,997 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:40,497 -  * Debugger is active!
+2024-10-20 13:16:40,497 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:44,046 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:45,586 -  * Debugger is active!
+2024-10-20 13:16:45,586 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:49,354 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:50,593 -  * Debugger is active!
+2024-10-20 13:16:50,594 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:54,444 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:16:55,549 -  * Debugger is active!
+2024-10-20 13:16:55,550 -  * Debugger PIN: 107-305-869
+2024-10-20 13:16:59,490 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:17:00,523 -  * Debugger is active!
+2024-10-20 13:17:00,524 -  * Debugger PIN: 107-305-869
+2024-10-20 13:17:04,535 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:17:05,502 -  * Debugger is active!
+2024-10-20 13:17:05,503 -  * Debugger PIN: 107-305-869
+2024-10-20 13:17:09,579 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:17:10,502 -  * Debugger is active!
+2024-10-20 13:17:10,502 -  * Debugger PIN: 107-305-869
+2024-10-20 13:17:14,681 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/web/authentication.py', reloading
+2024-10-20 13:17:15,609 -  * Debugger is active!
+2024-10-20 13:17:15,609 -  * Debugger PIN: 107-305-869
+2024-10-20 13:17:17,300 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/requests_to_github_api.py', reloading
+2024-10-20 13:17:17,301 -  * Detected change in '/home/raulgc10/TFG/OSSanalyzer/utils.py', reloading
