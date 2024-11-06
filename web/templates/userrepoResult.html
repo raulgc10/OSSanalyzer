@@ -1,48 +1,87 @@
 {% extends "base.html" %} 
-{% block title %}result{% endblock %}
+{% block title %}Análisis del Repositorio{% endblock %}
 {% block content %}
-    <div id="izq" >
-        <h1>Análisis del repositorio</h2>
-        <h2>{{ NombreRepo }} - {{ NombreUser }}</h2>
-        <h3>Este repositorio tiene un total de {{ totalFiles }} archivos</h3>
-        <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" height="400px" width="550px"><ul>{% for nombre, porcentaje in langPercentages.items() %}<li> {{ nombre }}: {{ porcentaje }}</li>{% endfor %}</ul>    
-        </br>
-        <h4>Análisis de los lenguajes minoritarios</h4>
-        <p>Número de commits realizados sobre lenguajes minoritarios:</p>
-        <ul>
-            {% for lenguajemin, num in total_commits_min_languages.items() %}
-            <li><strong>{{ lenguajemin }}</strong>: {{num}} </li>
-            {% endfor %}
-        </ul>
-        <p>Usuarios con mayor número de commits realizados sobre los lenguajes minoritarios:</p>
-        <ul>
-            {% for lang, contributors in topcontributors.items() %}
-                <li><strong>{{ lang }}:</strong></li>
-                <ul>
-                    {% for user, commits in contributors %}
-                        <li>{{ user }}: {{ commits }} commits</li>
+    <section class="container mt-4">
+        <header class="mb-4 text-center">
+            <h1>Análisis del Repositorio</h1>
+            <h2>{{ NombreRepo }} - {{ NombreUser }}</h2>
+            <h3 class="text-muted">Total de {{ totalFiles }} archivos</h3>
+        </header>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <figure class="text-center">
+                    <img src="data:image/png;base64,{{ image }}" alt="Gráfico de Porcentajes" class="img-fluid mb-3" style="max-height: 400px; max-width: 100%;">
+                    <figcaption class="text-muted">Distribución de archivos por lenguaje</figcaption>
+                </figure>
+
+                <section>
+                    <h4>Análisis de lenguajes minoritarios</h4>
+                    <p>Haz clic en un lenguaje para ver a los usuarios destacados:</p>
+                    <ul class="list-group" id="language-list">
+                        {% for lenguajemin, num in total_commits_min_languages.items() %}
+                        <li class="list-group-item">
+                            <a href="#" class="language-link d-flex justify-content-between align-items-center" data-lang="{{ lenguajemin }}">
+                                <strong>{{ lenguajemin }}</strong>
+                                <span class="badge bg-primary rounded-pill">{{ num }}</span>
+                            </a>
+                            <div class="contributors-list mt-2" style="display: none;">
+                                <h6>Usuarios destacados en {{ lenguajemin }}:</h6>
+                                <ul class="list-group">
+                                    {% for user, commits in topcontributors[lenguajemin] %}
+                                    <li class="list-group-item">{{ user }}: <span class="text-muted">{{ commits }} commits</span></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+            
+            <aside class="col-md-6">
+                <h4>Aportaciones por usuario</h4>
+                <ul class="list-group">
+                    {% for nombre, detalles in personas.items() %}
+                    <li class="list-group-item">
+                        <a href="#" class="user-link">{{ nombre }}</a>
+                        <div class="commits-list mt-2" style="display: none;">
+                            <ul class="list-unstyled">
+                                {% for key, value in detalles.items() %}
+                                <li>{{ key }}: {{ value }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
                     {% endfor %}
                 </ul>
-            {% endfor %}
-        </ul>
-    </div>
-    <div id="der">
-        <h4> Aportaciones de cada usuario en commits: </h4>
-        <ul>
-            {% for nombre, detalles in personas.items() %}
-                <li>
-                    <a href="#" class="user-link">{{ nombre }}</a>
-                    <div class="commits-list" style="display: none;">
-                        <ul>
-                            {% for key, value in detalles.items() %}
-                                <li>{{ key }}: {{ value }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+            </aside>
+        </div>
+    </section>
+    
+    <!-- CSS y JS -->
     <link rel="stylesheet" href="static/userrepo.css">
     <script src="static/userrepo.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.language-link').forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const contributorsList = link.nextElementSibling;
+
+                    // Ocultar otras listas de contribuyentes
+                    document.querySelectorAll('.contributors-list').forEach(function(list) {
+                        if (list !== contributorsList) {
+                            list.style.display = 'none';
+                        }
+                    });
+
+                    // Mostrar u ocultar la lista seleccionada
+                    contributorsList.style.display = contributorsList.style.display === 'none' || contributorsList.style.display === '' 
+                        ? 'block' 
+                        : 'none';
+                });
+            });
+        });
+    </script>
 {% endblock %}

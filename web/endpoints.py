@@ -5,7 +5,7 @@ import json
 import matplotlib.pyplot as plt
 import io
 import base64
-from .models import Repository, User
+from .models import Repository, User, UserExpertise
 from . import db
 import utils
 
@@ -31,7 +31,6 @@ def userrepo():
             default_branch = obtain_default_branch(username, reponame)
             last_commit = obtain_last_commit(username, reponame, default_branch)
             repository_in_db = db.session.query(Repository).filter_by(owner_name=username, repository_name=reponame).first()
-
             if not repository_in_db or repository_in_db.last_commit != last_commit:
                 repo = obtain_repo_data(f"https://github.com/{username}/{reponame}.git", f"/tmp/{reponame}.git")
                 users = obtain_users(repo)
@@ -45,28 +44,70 @@ def userrepo():
                 total_files = obtain_num_files(username, reponame)
                 minoritary_languages = obtain_min_languages(languages_percentage)
                 total_commits_on_min_languages = obtain_total_commits_min_languages(nume)
-                top_contribuyentes_minoritarios = top_contribuyentes_por_lenguaje(nume, utils.minlanguages, top_n=1)
+                top_contribuyentes_minoritarios = top_contribuyentes_por_lenguaje(nume, utils.minlanguages, top_n=100000)
                 
                 new_Repo = Repository(owner_name=username, repository_name=reponame, usernames = users, repo_data = data, lg_percent = languages_percentage, num_files = total_files, min_languages = minoritary_languages, default_branch = default_branch, last_commit = last_commit,total_commits_on_min_languages = total_commits_on_min_languages, min_languages_experts = top_contribuyentes_minoritarios)
                 db.session.add(new_Repo)
                 db.session.commit()
+                for i in users:
+                    user_in_db = db.session.query(UserExpertise).filter_by(user=i).first()
+                    if not user_in_db:
+                        repo_contrib = []
+                        repo_contrib.append(reponame)
+                        commits_min_languages_per_repo = {}
+                        commits_min_languages_per_repo[reponame] = files_data[i]
+                        new_User = UserExpertise(user=i, repositories_contribution=repo_contrib, commits_min_languages_per_repo = commits_min_languages_per_repo)
+                        db.session.add(new_User)
+                        db.session.commit()
+                    else:
+                        # Si el usuario ya existe, modificar los atributos del registro existente
+                        repo_contrib = user_in_db.repositories_contribution.copy()  # Copiar para trabajar sobre ello
+                        commits_min_languages_per_repo = user_in_db.commits_min_languages_per_repo.copy()  # Copiar para evitar modificar directamente
+                        
+                        # Asegurarse de no añadir duplicados en repositorios
+                        if reponame not in repo_contrib:
+                            repo_contrib.append(reponame)
+
+                        # Actualizar los commits por lenguajes del repositorio
+                        commits_min_languages_per_repo[reponame] = files_data[user_in_db.user]
+
+                        # Asignar los valores modificados de nuevo a la base de datos (reemplazar directamente)
+                        user_in_db.repositories_contribution = repo_contrib
+                        user_in_db.commits_min_languages_per_repo = commits_min_languages_per_repo
+
+                        # Marcar el objeto como modificado explícitamente y confirmar los cambios
+                        db.session.commit()
             else:
                 files_data = repository_in_db.repo_data["data"]
                 languages_percentage = repository_in_db.lg_percent
                 total_files = repository_in_db.num_files
                 total_commits_on_min_languages = repository_in_db.total_commits_on_min_languages
                 top_contribuyentes_minoritarios = repository_in_db.min_languages_experts
-        
+                    
             # Crear la gráfica con matplotlib
-            fig, ax = plt.subplots(figsize=(8, 6))  # Aumentar el tamaño de la figura
-            ax.pie(languages_percentage.values(), 
-                labels=languages_percentage.keys(), 
-                autopct='%1.1f%%', 
+            fig, ax = plt.subplots(figsize=(14, 10))  # Aumentar el tamaño de la figura
+            total = sum(languages_percentage.values())
+            labels_with_percentage = [f'{key} - {value / total * 100:.1f}%' for key, value in languages_percentage.items()]
+            # Crear el gráfico circular sin las etiquetas
+            wedges, texts = ax.pie(
+                languages_percentage.values(),
                 startangle=90,  # Cambiar el ángulo de inicio para equilibrar la disposición
-                labeldistance=1,  # Aumentar la distancia de las etiquetas al centro del gráfico
-                wedgeprops={'linewidth': 1, 'edgecolor': 'white'})  # Añadir separación entre los sectores
+                wedgeprops={'linewidth': 1, 'edgecolor': 'white'}  # Añadir separación entre los sectores
+            )
 
-            ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+            # Añadir una leyenda
+            ax.legend(
+                wedges, labels_with_percentage,
+                loc="center left",  # Ubicación de la leyenda
+                bbox_to_anchor=(0.85, 0, 0.5, 1), # Posicionar la leyenda fuera del gráfico
+                frameon=False,
+                fontsize='x-large'
+            )
+
+            # Asegurarse de que el gráfico sea un círculo
+            ax.axis('equal')
+
+            # Añadir título
             ax.set_title('Porcentaje de uso de lenguajes')
 
             # Guardar la imagen en un buffer de memoria
@@ -77,7 +118,6 @@ def userrepo():
             # Convertir la imagen en base64 para incrustarla en HTML
             image_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
             plt.close()  # Cerrar la figura
-
             return render_template("userrepoResult.html", user = user, NombreUser = username, image=image_base64, NombreRepo = reponame, personas=files_data, langPercentages = languages_percentage, totalFiles = total_files, total_commits_min_languages = total_commits_on_min_languages, topcontributors = top_contribuyentes_minoritarios)
     else:
         return "Error al procesar la petición"
