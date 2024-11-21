@@ -1,14 +1,6 @@
 from . import db
 from flask_login import UserMixin
 
-
-class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), unique=True)
-    username = db.Column(db.String(100), unique=True)
-    password = db.Column(db.String(100))
-    gitname = db.Column(db.String(100))
-
 class Repository(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     owner_name = db.Column(db.String(100))
@@ -28,3 +20,10 @@ class UserExpertise(db.Model):
     user = db.Column(db.String(100))
     repositories_contribution = db.Column(db.JSON)
     commits_min_languages_per_repo = db.Column(db.JSON)
+
+class Languages(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    lan_name = db.Column(db.String(100))
+    lan_num_users = db.Column(db.Integer)
+    lan_users = db.Column(db.JSON)
+    lan_num_commits = db.Column(db.Integer)

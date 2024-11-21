@@ -167,3 +167,21 @@ def top_contribuyentes_por_lenguaje(contribuciones, lenguajes_minoritarios, top_
 
     return top_contribuyentes_modificados
 
+def obtain_lan(data):
+    # Crear el diccionario de salida
+    languages = {}
+
+    # Procesar el diccionario de entrada
+    for user, languages_used in data.items():
+        for language, commits in languages_used.items():
+            if language not in languages:
+                languages[language] = [0, set(), 0]  # [total commits, set of users, user count]
+            languages[language][0] += commits  # Sumar los commits
+            languages[language][1].add(user)  # Añadir el usuario al conjunto
+            languages[language][2] = len(languages[language][1])  # Número de usuarios distintos
+
+    # Convertir el set de usuarios en lista
+    for language in languages:
+        languages[language][1] = list(languages[language][1])
+
+    return languages

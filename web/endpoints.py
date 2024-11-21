@@ -1,11 +1,11 @@
 from flask import Blueprint,render_template, request, session
-from utils import obtain_repo_data, obtain_users, obtain_files_extension, obtain_emails, obtain_users_files, counter_ext, define_expertise, dict_to_json, obtain_total_commits_min_languages, top_contribuyentes_por_lenguaje, obtain_min_languages
+from utils import obtain_repo_data, obtain_users, obtain_files_extension, obtain_emails, obtain_users_files, counter_ext, define_expertise, dict_to_json, obtain_total_commits_min_languages, top_contribuyentes_por_lenguaje, obtain_min_languages, obtain_lan
 from requests_to_github_api import obtain_language_percentages, obtain_num_files, obtain_user_repos, obtain_used_languages_on_repo, obtain_last_commit, obtain_default_branch
 import json
 import matplotlib.pyplot as plt
 import io
 import base64
-from .models import Repository, User, UserExpertise
+from .models import Repository, UserExpertise, Languages
 from . import db
 import utils
 
@@ -77,6 +77,35 @@ def userrepo():
 
                         # Marcar el objeto como modificado explícitamente y confirmar los cambios
                         db.session.commit()
+                        
+                lan_dict = obtain_lan(nume)
+
+                for language, landata in lan_dict.items():
+                    lan_num_commits = landata[0]  # Total de commits nuevos
+                    lan_users = landata[1]  # Lista de usuarios nuevos
+                    lan_num_users = landata[2]  # Número de usuarios únicos nuevos
+
+                    # Buscar si el lenguaje ya existe en la base de datos
+                    lenguaje_existente = Languages.query.filter_by(lan_name=language).first()
+
+                    if lenguaje_existente:
+                        # Si ya existe, actualizar los campos sumando los valores actuales con los nuevos
+                        lenguaje_existente.lan_num_commits += lan_num_commits  # Sumar commits
+                        lenguaje_existente.lan_num_users += lan_num_users  # Sumar usuarios
+                        # Agregar los usuarios nuevos sin duplicar
+                        lenguaje_existente.lan_users = list(set(lenguaje_existente.lan_users + lan_users))  # Usamos set para evitar duplicados
+                    else:
+                        # Si no existe, crear una nueva instancia y agregarla
+                        nuevo_lenguaje = Languages(
+                            lan_name=language,        # Nombre del lenguaje
+                            lan_num_users=lan_num_users,  # Número total de usuarios
+                            lan_users=lan_users,      # Lista de usuarios que han usado el lenguaje
+                            lan_num_commits=lan_num_commits  # Total de commits
+                        )
+                        db.session.add(nuevo_lenguaje)
+                
+                # Confirmar los cambios en la base de datos
+                db.session.commit()
             else:
                 files_data = repository_in_db.repo_data["data"]
                 languages_percentage = repository_in_db.lg_percent
